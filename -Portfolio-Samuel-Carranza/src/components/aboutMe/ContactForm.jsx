@@ -2,6 +2,8 @@ import React from 'react'
 import { Form, Button } from 'react-bootstrap'
 import { useState, useRef } from 'react';
 import "./aboutMe.css";
+import eMailIcon from '/public/icons/e-mail-icon.svg'; // Asegúrate de que la ruta sea correcta
+import userIcon from '/public/icons/user-icon.svg';
 
 
 const ContactForm = () => {
@@ -106,71 +108,78 @@ const ContactForm = () => {
 
     return (
         <>
-            <Form className="" onSubmit={handlerSubmit}>
-                <Form.Group className="form-group">
-                    <Form.Label>Nombre y Apellido</Form.Label>
-                    <Form.Control
-                        ref={fullNameRef}
-                        name="fullName"
-                        type="text"
-                        placeholder="Ingresa tu nombre y apellido"
-                        value={formData.fullName}
-                        onChange={handleChange}
-                        className={errors.fullName ? "input-error" : ""}
-                    />
-                    {errors.fullName && <div className="alert alert-warning">El campo es obligatorio.</div>}
-                </Form.Group>
+            <div className="">
+                <Form className="" onSubmit={handlerSubmit}>
+                    <Form.Group className="form-group">
+                        <Form.Label>Nombre y Apellido</Form.Label>
+                        <div className='input-with-icon fullName'>
+                        <Form.Control
+                            ref={fullNameRef}
+                            name="fullName"
+                            type="text"
+                            placeholder="Ingresa tu nombre y apellido"
+                            value={formData.fullName}
+                            onChange={handleChange}
+                            className={errors.fullName ? "input-error" : ""}
+                        />
+                        </div>
+                        {errors.fullName && <div className="alert alert-warning">El campo es obligatorio.</div>}
+                    </Form.Group>
 
-                <Form.Group className="form-group">
-                    <Form.Label>Email</Form.Label>
-                    <Form.Control
-                        ref={emailRef}
-                        name="email"
-                        type="email"
-                        placeholder="Ingresa tu email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        className={errors.email ? "input-error" : ""}
-                    />
-                    {errors.email && <div className="alert alert-warning">El email es obligatorio.</div>}
-                </Form.Group>
+                    <Form.Group className="form-group">
+                        <Form.Label>Email</Form.Label>
+                        <div className='input-with-icon email'>
+                        <Form.Control
+                            ref={emailRef}
+                            name="email"
+                            type="email"
+                            placeholder="Ingresa tu email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            className={errors.email ? "input-error" : ""}
+                        />
+                        </div>
+                        {errors.email && <div className="alert alert-warning">El email es obligatorio.</div>}
+                    </Form.Group>
 
-                <Form.Group className="form-group">
-                    <Form.Label>Confirmación del Email</Form.Label>
-                    <Form.Control
-                        ref={emailConfirmRef}
-                        name="emailConfirm"
-                        type="email"
-                        placeholder="Confirma tu email"
-                        value={formData.emailConfirm}
-                        onChange={handleChange}
-                        className={errors.emailConfirm ? "input-error" : ""}
-                    />
-                    {errors.emailConfirm && <div className="alert alert-warning">La confirmación de email es obligatoria.</div>}
-                    {errors.emailMismatch && <div className="alert alert-warning">Los emails no coinciden.</div>}
-                </Form.Group>
+                    <Form.Group className="form-group">
+                        <Form.Label>Confirmación del Email</Form.Label>
+                        <div className='input-with-icon email'>
+                        <Form.Control
+                            ref={emailConfirmRef}
+                            name="emailConfirm"
+                            type="email"
+                            placeholder="Confirma tu email"
+                            value={formData.emailConfirm}
+                            onChange={handleChange}
+                            className={errors.emailConfirm ? "input-error" : ""}
+                        />
+                        </div>
+                        {errors.emailConfirm && <div className="alert alert-warning">La confirmación de email es obligatoria.</div>}
+                        {errors.emailMismatch && <div className="alert alert-warning">Los emails no coinciden.</div>}
+                    </Form.Group>
 
-                <Form.Group className="form-group">
-                    <Form.Label>Mensaje</Form.Label>
-                    <Form.Control
-                        ref={messageRef}
-                        name="message"
-                        as="textarea"
-                        placeholder="Escriba tu mensaje aquí"
-                        value={formData.message}
-                        onChange={handleChange}
-                        className={errors.message ? "input-error" : ""}
-                        maxLength={200}
-                    />
-                    {errors.message && <div className="alert alert-warning">El mensaje debe tener al menos 10 caracteres.</div>}
+                    <Form.Group className="form-group">
+                        <Form.Label>Mensaje</Form.Label>
+                        <Form.Control
+                            ref={messageRef}
+                            name="message"
+                            as="textarea"
+                            placeholder="Escriba tu mensaje aquí"
+                            value={formData.message}
+                            onChange={handleChange}
+                            className={errors.message ? "input-error" : ""}
+                            maxLength={200}
+                        />
+                        {errors.message && <div className="alert alert-warning">El mensaje debe tener al menos 10 caracteres.</div>}
 
-                </Form.Group>
+                    </Form.Group>
 
-                <Button type="submit" variant="primary" className='contact-button' >
-                    Enviar
-                </Button>
-            </Form>
-
+                    <Button type="submit" variant="primary" className='contact-button' >
+                        Enviar
+                    </Button>
+                </Form>
+            </div>
         </>
     )
 }
