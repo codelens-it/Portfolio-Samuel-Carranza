@@ -1,10 +1,14 @@
 import React from 'react'
+import ContactForm from './ContactForm'
 
 const AboutMe = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+      <h2>Contáctame</h2>
+      <div className="contact-form-container">
+        <ContactForm />
+      </div>
+    </>
   )
 }
 
