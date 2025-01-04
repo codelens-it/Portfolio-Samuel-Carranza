@@ -7,10 +7,6 @@ h2{
     text-decoration: underline 0.1rem #880000;
 }
 
-.no{
-    text-decoration: line-through;
-}
-
 /*Separacion de los contenedores*/
 .first-container {
     display: flex;

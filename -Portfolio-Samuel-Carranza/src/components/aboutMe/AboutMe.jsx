@@ -1,10 +1,11 @@
 const toolsMock = [
-  {img: "ruta1",
+  {
+    img: "ruta1",
     title: "tutle2",
   },
   {
-    img:"ruta2",
-    title:"tutle3"
+    img: "ruta2",
+    title: "tutle3"
   }
 ]
 
@@ -39,7 +40,7 @@ const AboutMe = () => {
 
       <div className='first-container'>
         <div className='right-column'>
-          <spam className="no">Sexo a la </spam>derecha
+          derecha
         </div>
         <div className='left-column'>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus sed massa nec auctor. Nullam enim eros, maximus lobortis dolor a, tempus rutrum nisl. Praesent augue diam, molestie quis malesuada eget, efficitur id quam. Nullam porta metus augue, vel scelerisque felis eleifend at. Mauris non mattis odio. Ut tincidunt velit eget bibendum euismod. Sed pellentesque pulvinar nisi at blandit. Donec vel lacus ut magna pretium pulvinar. Nam pulvinar libero quis magna hendrerit tincidunt. Maecenas eu pharetra lectus.</p>
@@ -54,11 +55,11 @@ const AboutMe = () => {
 
       <h3>Herramientas</h3>
       <div className='first-container'>
-        {toolsMock.map((tool,index)=> (
+        {toolsMock.map((tool, index) => (
           <ItemTool
-          key={index}
-          img={tool.img}
-          title={tool.title}
+            key={index}
+            img={tool.img}
+            title={tool.title}
           />
         ))}
       </div>
