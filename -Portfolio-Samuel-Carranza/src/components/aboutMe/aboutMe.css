@@ -7,139 +7,76 @@ h2{
     text-decoration: underline 0.1rem #880000;
 }
 
-.contact-form-container {
+.no{
+    text-decoration: line-through;
+}
+
+/*Separacion de los contenedores*/
+.first-container {
     display: flex;
+    width: 100%;
+  }
+  
+
+/*cada columna ocupa el 50% de la pag */
+.left-column, 
+.right-column {
+  flex: 1; /* columnas proporciones iguales */
+  padding: 10px;
+  border: 1px solid black; 
+  box-sizing: border-box; /* padding en el ancho total */
+}
+
+
+.left-column {
+  background-color: #f0f0f0;
+}
+
+.right-column {
+  background-color: #d0d0d0;
+}
+
+
+
+.second-container{
+    background-color: #d3bebe;
+
+
+}
+
+
+
+
+
+
+/*Item tools*/
+.img-card{
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    backdrop-filter: blur(15px);
-    background: rgba(255, 255, 255, 0.2);
-/* background-color: #132644; */
-
-    width: 80vw;
-    max-width: 750px;
-    height: auto;
-    padding: 1rem;
-    top: 6vh;
-    left: 50%;
-    transform: translateX(-50%);
-    gap: 2em;
-    border-radius: 2rem;
-    opacity: 0px;
-   
-    position: absolute; /* Es necesario para usar las propiedades top y left */
+    text-align: center;
 }
 
-
-/*distancia ente inputs y posicion del titulo.*/
-.form-group {
-    margin: 2rem;
-    text-align: left;
-    font-size: 1rem
-}
-
-
-/*Caja del Input */
-input, textarea{
-    width: 40rem;
-    padding: 0.5em;
-    border: none;
-    border-bottom: 1px solid #ECEDEE;
-    /* background-color: #132644;  */
-    background: rgba(255, 255, 255, 0.2);
+.img-container {
+    width: 50px; /* Tamaño del círculo */
+    height: 50px;
+    border-radius: 50%; /* div circular */
+    overflow: hidden;
+    border: 2px solid #000; /* Borde para ver */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 12px;
+  }
+  
+  .img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para llenar el círculo */
+  }
+  
+  .img-title {
+    margin-top: 10px;
     font-size: 1rem;
-    box-sizing: border-box;
-}
-textarea{
-    padding-right: 3rem;
-    padding-bottom: 3rem;
-}
-
-
-input::placeholder, textarea::placeholder {
-    font-size: 1rem; /* tamñao placeholders */
-}
-
-
-/*Boton del form*/
-.contact-button {
-    background-color: #132644;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    padding: 0.8rem 1.5rem;
-    cursor: pointer;
-    margin-left: 17rem;
-
-
-    width: 200vw;  /* ancho */
-    height: auto; /*altura */
-    max-width: 200px;  /* ancho máximo */
-
-
-    /* Propiedades de texto */
-    font-size: 1.2rem;  /* Tamaño de fuente relativo */
-    font-weight: 400;
-    line-height: 26px;
-    text-align: center;  /* Centrado del texto */
-   
-}
-
-
-.contact-button:hover {
-    background-color: #5a1bba;
-}
-
-
-
-
-/*Error-Alerta*/
-.alert {
-    margin-top: 0.8rem;
-    padding: 0.8rem;
-    border-radius: 5px;
-    width: 38rem;
-}
-
-
-.input-error {
-    border-color: red;
-}
-
-
-.alert-warning {
-    color: black;
-    background-color: rgb(243, 250, 140);
-}
-
-
-
-
-/*Iconos*/
-.input-with-icon {
-  position: relative;
-}
-
-
-.input-with-icon::after {
-  content: '';
-  position: absolute;
-  right: 3rem;
-  top: 1rem;
-  transform: translateY(-50%);
-  width: 3rem; /* tamaño del ícono */
-  height: 3rem; /* tamaño del ícono */
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-
-.input-with-icon.email::after {
-  background-image: url('/public/icons/e-mail-icon.svg'); /* Ajusta la ruta según la ubicación del archivo */
-}
-
-
-.input-with-icon.fullName::after {
-  background-image: url('/public/icons/user-icon.svg'); /* Ajusta la ruta según la ubicación del archivo */
-}
-
-
-
+    color: #333;
+  }
