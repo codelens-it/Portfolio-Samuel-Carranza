@@ -1,7 +1,7 @@
 import React from 'react'
 import { Form, Button } from 'react-bootstrap'
 import { useState, useRef } from 'react';
-import "./aboutMe.css";
+import "./contact.css";
 
 
 const ContactForm = () => {
