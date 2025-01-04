@@ -1,0 +1,54 @@
+{
+  "titles": {
+    "home": "Home",
+    "experience": "Work Experience",
+    "portfolio": "Portfolio",
+    "photography": "Photography",
+    "video-editing": "Video Editing",
+    "about": "About Me",
+    "tools": "Tools",
+    "navbar-contact": "Contact",
+    "title-contact": "Contact Me"
+  },
+  "home": {
+    "greeting": "¡Hi there! My name is Samuel Carranza",
+    "role": "Photographer - Video editor"
+  },
+  "experience": [
+    {
+      "name": "Nombre del puesto",
+      "company": "Empresa",
+      "start-date": "20/11/2024",
+      "end-date": "Actual",
+      "summary": "Descripción del puesto. Lorem ipsum dolor sit amet."
+    },
+    {
+      "name": "Nombre del puesto",
+      "company": "Empresa",
+      "start-date": "01/12/2024",
+      "end-date": "11/12/2024",
+      "summary": "Descripción del puesto. Lorem ipsum dolor sit amet."
+    }
+  ],
+  "about": {
+    "paragraphs":[
+    "Párrafo",
+    "Párrafo",
+    "Párrafo"
+  ],
+  "cv-message": "Lorem ipsum",
+  "download": "Download Resume"
+  },
+  "contact-form": {
+    "full-name": "Full name",
+    "email": "Email",
+    "message": "Message",
+    "message-placeholder": "Leave your message here",
+    "submit": "Submit"
+  },
+  "footer": {
+    "slogan": "Passion for every detail, perfection in every frame.",
+    "media-contact-message": "Contact me on my social media",
+    "copyright": "@2025 Developed by CodeLens"
+  }
+  }
