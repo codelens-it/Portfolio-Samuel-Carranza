@@ -1,16 +1,18 @@
+@import url('/src/index.css');
+
 /*Titulo principal*/
 h2{
   text-align: center;
-  color:white
+  color:var(--white);
 }
 h2, h3{
-  color: white;
+  color:var(--white);
 }
 p{
-  color: white
+  color: var(--white);
 }
 .underline {
-  text-decoration: underline 0.1rem #880000;
+  text-decoration: underline 0.1rem var(--darkred);
 }
 
 /*---Primera seccion---*/
@@ -76,8 +78,8 @@ p{
   width: 250px;
   height: 49px;
   border-radius: 20px;
-  background-color: #132644;
-  color: white;
+  background-color: var(--midnightblue);
+  color: var(--white);
   font-size: 16px;
   text-align: center; 
   border: none; 
@@ -129,7 +131,7 @@ p{
 .img-title {
   margin-top: 0.1rem;
   font-size: 1rem;
-  color: white;
+  color: var(--white);
 }
 
 .img-card:hover {
