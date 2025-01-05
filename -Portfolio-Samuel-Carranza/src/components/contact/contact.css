@@ -1,10 +1,11 @@
+@import url('/src/index.css');
 /*Titulo*/
 h2{
     text-align: center;
-
+    color: var(--white);
 }
 .underline {
-    text-decoration: underline 0.1rem #880000;
+    text-decoration: underline 0.1rem --darkred;
 }
 
 .contact-form-container {
@@ -12,7 +13,6 @@ h2{
     align-items: center;
     backdrop-filter: blur(15px);
     background: rgba(255, 255, 255, 0.2);
-/* background-color: #132644; */
 
     width: 80vw;
     max-width: 750px;
@@ -33,7 +33,9 @@ h2{
 .form-group {
     margin: 2rem;
     text-align: left;
-    font-size: 1rem
+    font-size: 1rem;
+    color:var(--white);
+    
 }
 
 
@@ -44,9 +46,10 @@ input, textarea{
     border: none;
     border-bottom: 1px solid #ECEDEE;
     /* background-color: #132644;  */
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
     font-size: 1rem;
     box-sizing: border-box;
+    color: var(--white);
 }
 textarea{
     padding-right: 3rem;
@@ -61,8 +64,8 @@ input::placeholder, textarea::placeholder {
 
 /*Boton del form*/
 .contact-button {
-    background-color: #132644;
-    color: white;
+    background-color: --midnightblue;
+    color: --white;
     border: none;
     border-radius: 20px;
     padding: 0.8rem 1.5rem;

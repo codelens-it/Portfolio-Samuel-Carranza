@@ -1,19 +1,24 @@
 const toolsMock = [
   {
-    img: "ruta1",
-    title: "tutle2",
+    img: "public/icons/adobe-icon.svg",
+    title: "Adobe",
   },
   {
-    img: "ruta2",
-    title: "tutle3"
+    img: "public/icons/adobe-icon.svg",
+    title: "Adobo"
+  },
+  {
+    img: "public/icons/adobe-icon.svg",
+    title: "Adobe3"
+  },
+  {
+    img: "public/icons/adobe-icon.svg",
+    title: "Adobe4"
   }
 ]
 
 import React from 'react'
 
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import './aboutMe.css'
 import { Button } from 'react-bootstrap';
 import ItemTool from './ItemTool';
@@ -34,7 +39,7 @@ const AboutMe = () => {
 
 
   return (
-    <div>
+    <div className='about-me-conatiner'>
 
       <h2><span className='underline'>Sobre</span> Mí</h2>
 
@@ -50,20 +55,21 @@ const AboutMe = () => {
 
       <div className='second-container'>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus sed massa nec auctor. </p>
-        <Button onClick={handleDownload}>Descargar CV</Button>
+        <Button className="button-cv" onClick={handleDownload}>Descargar CV</Button>
       </div>
 
-      <h3>Herramientas</h3>
-      <div className='first-container'>
-        {toolsMock.map((tool, index) => (
-          <ItemTool
-            key={index}
-            img={tool.img}
-            title={tool.title}
-          />
-        ))}
+      <div className='third-container'>
+        <h3>Herramientas</h3>
+        <div className='icon-container'>
+          {toolsMock.map((tool, index) => (
+            <ItemTool
+              key={index}
+              img={tool.img}
+              title={tool.title}
+            />
+          ))}
+        </div>
       </div>
-
 
     </div>
   )
