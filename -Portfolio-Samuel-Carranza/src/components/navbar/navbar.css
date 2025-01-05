@@ -1,10 +1,254 @@
 header{
     display: flex;
-    justify-content: space-between;
     align-items: center; 
+    justify-content: flex-end;
     width: 100%;
     position: absolute;
+  }
+
+  .language-toggle {
+    margin-left: auto;
+  }
+  
+button {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
 }
 
+.navbar,
+.navbar-burger,
+.menu {
+  position: fixed;
+}
 
+body.open .background {
+  filter: blur(10px);
+}
 
+.navbar {
+  z-index: 1;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 72px;
+  padding-left: 20px;
+  padding-right: 72px;
+}
+
+.navbar-burger {
+  z-index: 3;
+  top: 10px;
+  right: 15px;
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  background-image: url("/icons/menu.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 20px;
+  background-color: var(--midnightblue);
+  border-radius: 50px;
+}
+
+body.open .navbar-burger {
+  background-image: url("/icons/close.svg");
+}
+
+.menu {
+  z-index: 2;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  width: 100%;
+  height: 100%;
+  background: var(--midnightblue);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+
+body.open .menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu nav:hover a {
+  opacity: 0.25;
+}
+
+.menu nav a:hover {
+  opacity: 1;
+}
+
+.navbar-logo{
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-logo img{
+    padding: 0;
+    margin: 0;
+    width: 130px;
+    height: 70px;
+}
+
+.menu nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  padding: 30px;
+}
+
+.menu a {
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: var(--white);
+  font-size: 1.2rem;
+  
+  width: 300px;
+  align-items: center;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+.menu nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 90%;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--white);
+  transform: scaleX(0);
+  transform-origin: 0% 50%;
+  transition: 0.4s;
+}
+
+.menu a:hover::after {
+  transform: scaleX(1);
+}
+
+body.open .menu a {
+  animation: appear 0.3s backwards;
+}
+
+nav a:nth-child(1) {
+    animation-delay: 0.1s; /* Retraso para el primer enlace */
+}
+  
+nav a:nth-child(2) {
+    animation-delay: 0.2s; /* Retraso para el segundo enlace */
+}
+  
+nav a:nth-child(3) {
+    animation-delay: 0.3s; /* Retraso para el tercer enlace */
+}
+  
+nav a:nth-child(4) {
+    animation-delay: 0.4s; /* Retraso para el cuarto enlace */
+}
+  
+nav a:nth-child(5) {
+    animation-delay: 0.5s; /* Retraso para el quinto enlace */
+}
+
+.navbar-language{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: var(--white);
+}
+
+.icon-language-container{
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+
+.icon-language{
+    width: 100%;
+    height: 100%;
+}
+
+.language{
+    cursor: pointer;
+}
+  
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    translate: 0 50px;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media(min-width:768px){
+  .navbar-burger{
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media(min-width: 1024px) {
+    .navbar-burger {
+      display: none;
+    }
+  
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        height: 80px;
+        visibility: visible;
+        width: 100%;
+        opacity: 1;
+        background: rgba(19, 38, 68, 0.5); 
+        backdrop-filter: blur(15px); 
+        -webkit-backdrop-filter: blur(4px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7); 
+    }
+
+    .navbar-logo{
+        margin-left: 46px;
+    }
+  
+    .menu nav {
+        flex-direction: row;
+        justify-content: space-evenly;
+        background: none;
+        width: 50%;
+        gap: 10px;
+    }
+  
+    .menu a {
+        width: auto;
+        font-size: 1.1rem;
+        white-space: nowrap;
+    }
+  
+    .menu a::after {
+        bottom: 3px;
+        width: 100%;
+    }
+
+    .icon-language-container{
+        width: 25px;
+        height: 25px;
+    }
+}  
