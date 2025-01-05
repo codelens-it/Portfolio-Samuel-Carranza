@@ -64,3 +64,8 @@ gap: 5px;
   width: clamp(30px, 4vw, 60px);
 }
 
+/*hovers*/
+.media-logo:hover {
+transform:  scale(1.1);
+transition: 0.3s all;
+}
