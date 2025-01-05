@@ -9,12 +9,12 @@ const Hero = () => {
         <h1>
           Fotógrafo 
           <br/> 
-          Editor de video
+          Editor de videos
         </h1>
       </div>
       <div className="hero-media">
-        <a href=""><img className="media-logo" src="/public/icons/icon-linkedin.svg" alt="LinkedIn" /></a>
-        <a href=""><img  className="media-logo"src="/public/icons/icon-instagram.svg" alt="Instagram" /></a>
+        <a href=""><img className="media-logo linkedin" src="/icons/linkedin.svg" alt="LinkedIn" /></a>
+        <a href=""><img  className="media-logo instagram"src="/icons/instagram.svg" alt="Instagram" /></a>
       </div>
     </section>
   )
