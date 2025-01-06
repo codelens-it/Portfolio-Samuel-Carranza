@@ -26,14 +26,23 @@ p{
 /*Separacion de los contenedores*/
 .first-container {
   display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.right-column{
-  display: flex;
+  width: 90%;
+  height: 25rem;
+  flex-wrap: wrap;
+  gap: 1rem;
   justify-content: center;
-  padding: 10px;
+  }
+  
+/*cada columna ocupa el 50% de la pag */
+.left-column, 
+.right-column {
+  flex: 1; /* columnas proporciones iguales */
+  /* border: 2px solid black;  */
+  height: 484px;
+  padding: 0;
+  margin-top: -2rem; ;
+  margin-left: 1px;
+  min-width: 400px;
 }
   
 
@@ -50,6 +59,31 @@ p{
   line-height: 1.5rem; 
 }
 
+.right-column {
+  margin-left: 5rem;
+  /* background-color: #6c6b6b; */
+}
+
+.right-column{
+  order: 1;
+}
+.left-column{
+  order: 2;
+} 
+@media (max-width: 768px) {
+  .first-container {
+    flex-direction: column; /* Cambia a disposición vertical */
+    align-items: center; /* Centrar contenido en columnas */
+  }
+  .right-column {
+    order: 1; /* Mantiene la columna derecha arriba */
+  }
+  .left-column {
+    order: 2; /* La columna izquierda queda abajo */
+  }
+}
+
+
 /*---Segunda seccion---*/
 /*Boton de CV*/
 .second-container{
@@ -59,7 +93,6 @@ p{
   gap: 1rem;
   justify-content: center;
   align-items: center;
-  /* margin-top: 1px; */
 
 }
 
@@ -135,5 +168,38 @@ p{
 
 
 .about-me-conatiner{
-  margin: 15px;
+  position: relative;
+  padding: 1rem;
+  margin: 2rem;
+  width: 100vw;
+  height: 92vh;
 }
+
+@media (max-width: 800px) {
+  .about-me-conatiner {
+    position: relative;
+    padding: 1rem;
+    margin: 2rem;
+    width: 100vw;
+    height: 170vh;
+  }
+
+  .second-container{
+    position: relative;
+    padding: 1rem;
+    margin: 2rem;
+    width: 100vw;
+    height: 15vh;
+  }
+  .third-container{
+    position: relative;
+    padding: 1rem;
+    margin: 2rem;
+    width: 100vw;
+    height: 15vh;
+
+  }
+
+}
+
+
