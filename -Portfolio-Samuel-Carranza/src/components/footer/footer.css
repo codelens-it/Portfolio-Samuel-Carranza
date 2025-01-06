@@ -40,11 +40,16 @@ footer {
     flex-direction: column;
     align-items: center;
   }
+
+  .container-redes{
+    display: flex;
+    align-items: center;
+  }
   
   /* Estilo para redes sociales */
   .footer-social span {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   
   .footer-social a {
@@ -52,11 +57,27 @@ footer {
     display: inline-block;
     text-decoration: none;
     cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .icon-instagram{
+    width: 30px;
+    height: 35px;
   }
   
-  .footer-social img {
+  .icon-linkedin {
     width: 40px;
     height: 40px;
+  }
+
+  .footer-social a:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .footer-social a:hover .icon-linkedin, .icon-instagram{
+    transform: scale(1.1);
   }
   
   /* Estilo para navegación */

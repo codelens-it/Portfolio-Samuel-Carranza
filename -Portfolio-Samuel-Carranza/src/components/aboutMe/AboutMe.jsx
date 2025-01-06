@@ -22,6 +22,7 @@ import React from 'react'
 import './aboutMe.css'
 import { Button } from 'react-bootstrap';
 import ItemTool from './ItemTool';
+import Polaroid from '../polaroid/Polaroid';
 
 const AboutMe = () => {
 
@@ -45,7 +46,7 @@ const AboutMe = () => {
 
       <div className='first-container'>
         <div className='right-column'>
-          derecha
+          <Polaroid image="/polaroids-prueba/sobre-mi.webp" alt="Samuel Carranza" size="large" />
         </div>
         <div className='left-column'>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus sed massa nec auctor. Nullam enim eros, maximus lobortis dolor a, tempus rutrum nisl. Praesent augue diam, molestie quis malesuada eget, efficitur id quam. Nullam porta metus augue, vel scelerisque felis eleifend at. Mauris non mattis odio. Ut tincidunt velit eget bibendum euismod. Sed pellentesque pulvinar nisi at blandit. Donec vel lacus ut magna pretium pulvinar. Nam pulvinar libero quis magna hendrerit tincidunt. Maecenas eu pharetra lectus.</p>

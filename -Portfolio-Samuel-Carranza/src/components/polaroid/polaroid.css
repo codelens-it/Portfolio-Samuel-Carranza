@@ -1,0 +1,44 @@
+.polaroid-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: var(--white);
+  border: 2px solid #ccc;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: rotate(0deg);
+  width: 150px;
+}
+
+.polaroid-container.small {
+  width: 150px;
+}
+
+.polaroid-container.large {
+  width: 260px;
+  height: 300px;
+}
+
+.polaroid-container:hover {
+  transform: rotate(5deg);
+}
+
+.polaroid-image {
+  width: 100%;
+  height: 230px;
+}
+
+.polaroid-caption {
+  margin-top: 10px;
+  font-size: 12px;
+  text-align: center;
+  color: #555;
+}
+
+@media(min-width: 768px){
+
+    .polaroid-container.large {
+        width: 300px;
+    }
+}

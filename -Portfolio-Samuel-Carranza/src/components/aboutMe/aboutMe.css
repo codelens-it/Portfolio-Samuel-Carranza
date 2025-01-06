@@ -1,7 +1,14 @@
 @import url('/src/index.css');
 
+.about-me-conatiner{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 /*Titulo principal*/
 h2{
+  padding: 30px 0 60px;
   text-align: center;
   color:var(--white);
 }
@@ -19,47 +26,29 @@ p{
 /*Separacion de los contenedores*/
 .first-container {
   display: flex;
-  width: 90%;
-  height: 25rem;
-
-  }
-  
-/*cada columna ocupa el 50% de la pag */
-.left-column, 
-.right-column {
-  flex: 1; /* columnas proporciones iguales */
-  /* border: 2px solid black;  */
-  height: 410px;
-  padding: 0;
-  margin-left: 1px;
+  flex-direction: column;
+  gap: 30px;
 }
+
+.right-column{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+  
 
 .left-column {
   display: flex;
-  /*Centra los parrafos en el medio*/
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  /*pone un parrafo debajo del otro*/
-  flex-direction: column; 
   gap: 1rem;
-
-  /* background-color: #f0f0f0; */
-  margin-right: -2rem;
 }
 
 .left-column p {
   font-size: 1rem; 
   line-height: 1.5rem; 
 }
-
-
-
-.right-column {
-  margin-left: 5rem;
-  /* background-color: #6c6b6b; */
-}
-
-
 
 /*---Segunda seccion---*/
 /*Boton de CV*/
@@ -95,7 +84,7 @@ p{
 /*---Tercera seccion---*/
 /*Item tools*/
 .third-container{
-  margin-left: 5rem;
+  /* margin-left: 5rem; */
 }
 
 .icon-container {
