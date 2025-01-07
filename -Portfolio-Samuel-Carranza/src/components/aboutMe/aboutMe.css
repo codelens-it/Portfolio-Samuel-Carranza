@@ -1,29 +1,47 @@
-@import url('/src/index.css');
+.title-container{
+  text-align: center;
+  padding: 60px 0 40px 0;
+}
 
 /*Titulo principal*/
-h2{
+.title-about-me{
+  font-size: 50px;
   text-align: center;
   color:var(--white);
+  position: relative;
+  display: inline-block;
 }
-h2, h3{
+
+.title-about-me::before {
+  content: "";
+  position: absolute;
+  bottom: -5px; /* Coloca la línea justo debajo del texto */
+  left: 15%;
+  width: 70%; 
+  transform: translateX(-30%);/* Haz que la línea ocupe todo el ancho del texto */
+  height: 2px; /* Grosor de la línea */
+  background-color: var(--darkred); /* Color de la línea */
+}
+
+.title-about-me, h3, p{
   color:var(--white);
 }
-p{
-  color: var(--white);
-}
-.underline {
+
+/* .underline {
   text-decoration: underline 0.1rem var(--darkred);
-}
+} */
 
 /*---Primera seccion---*/
 /*Separacion de los contenedores*/
 .first-container {
   display: flex;
-  width: 90%;
-  height: 25rem;
+  /* width: 90%; */
+  /* height: 25rem; */
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 25px;
   justify-content: center;
+  padding-top: 60px;
+  padding-bottom: 30px;
   }
   
 /*cada columna ocupa el 50% de la pag */
@@ -31,24 +49,21 @@ p{
 .right-column {
   flex: 1; /* columnas proporciones iguales */
   /* border: 2px solid black;  */
-  height: 484px;
+  /* height: 484px; */
   padding: 0;
-  margin-top: -2rem; ;
-  margin-left: 1px;
-  min-width: 400px;
+  /* margin-top: -2rem; ; */
+  /* margin-left: 1px;
+  min-width: 400px; */
 }
+  
 
 .left-column {
   display: flex;
-  /*Centra los parrafos en el medio*/
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  /*pone un parrafo debajo del otro*/
-  flex-direction: column; 
   gap: 1rem;
-
-  /* background-color: #f0f0f0; */
-  margin-right: -2rem;
+  padding: 20px;
 }
 
 .left-column p {
@@ -56,28 +71,14 @@ p{
   line-height: 1.5rem; 
 }
 
-.right-column {
-  margin-left: 5rem;
-  /* background-color: #6c6b6b; */
-}
 
-.right-column{
-  order: 1;
-}
-.left-column{
-  order: 2;
-} 
-@media (max-width: 768px) {
-  .first-container {
-    flex-direction: column; /* Cambia a disposición vertical */
-    align-items: center; /* Centrar contenido en columnas */
-  }
-  .right-column {
-    order: 1; /* Mantiene la columna derecha arriba */
-  }
-  .left-column {
-    order: 2; /* La columna izquierda queda abajo */
-  }
+
+.right-column {
+  /* margin-left: 5rem; */
+  /* background-color: #6c6b6b; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -87,10 +88,10 @@ p{
   /* background-color: #d3bebe; */
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
+  padding: 40px 0;
   justify-content: center;
   align-items: center;
-
 }
 
 .button-cv{
@@ -107,19 +108,22 @@ p{
 
 
 .button-cv:hover {
-  background-color: #5a1bba;
+  background-color: var(--darkred);
 }
 
 
 /*---Tercera seccion---*/
 /*Item tools*/
 .third-container{
-  margin-left: 5rem;
+  padding: 40px 20px;
 }
 
 .icon-container {
   display: flex;
-  }
+  flex-wrap: wrap;
+  padding: 15px 0;
+  gap: 10px;
+}
 
 .img-card{
   display: flex;
@@ -164,37 +168,70 @@ p{
 }
 
 
-.about-me-conatiner{
+/* .about-me-conatiner{
   position: relative;
   padding: 1rem;
   margin: 2rem;
   width: 100vw;
   height: 92vh;
-}
+} */
 
 @media (max-width: 800px) {
+  .title-about-me{
+    font-size: 30px;
+  }
+
+  .title-about-me::before {
+    content: "";
+    position: absolute;
+    bottom: -5px; /* Coloca la línea justo debajo del texto */
+    left: 20px;
+    width: 90px; 
+    transform: translateX(-30%);/* Haz que la línea ocupe todo el ancho del texto */
+    height: 2px; /* Grosor de la línea */
+    background-color: var(--darkred); /* Color de la línea */
+  }
+  
   .about-me-conatiner {
-    position: relative;
+   /*  position: relative;
     padding: 1rem;
     margin: 2rem;
     width: 100vw;
-    height: 170vh;
+    height: 170vh; */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .first-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
   }
 
   .second-container{
-    position: relative;
+    /* position: relative;
     padding: 1rem;
     margin: 2rem;
     width: 100vw;
-    height: 15vh;
+    height: 15vh; */
+    padding: 30px 20px;
+    text-align: center;
   }
-  .third-container{
-    position: relative;
-    padding: 1rem;
-    margin: 2rem;
-    width: 100vw;
-    height: 15vh;
 
+  .third-container{
+    /* position: relative; */
+    padding: 1rem 10px; 
+    /* margin: 2rem; */
+    /* width: 100vw;
+    height: 15vh; */
   }
 
 }

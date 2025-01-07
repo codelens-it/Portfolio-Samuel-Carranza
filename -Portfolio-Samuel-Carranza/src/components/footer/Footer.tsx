@@ -13,12 +13,12 @@ const Footer = () => {
         </div>
         <div className="footer-social">
             <span>Contáctame por redes</span>
-          <div>
-             <a href="https://twitter.com" target="_blank" aria-label="Twitter">
-            <img src="/icons/icon-instagram.svg" alt="Instagram" />
+          <div className="container-redes">
+             <a href="https://www.instagram.com/femt_10?igsh=MWxteGdiZnd2amkzaw==" target="_blank" aria-label="Twitter">
+            <img className="icon-instagram" src="/icons/instagram.svg" alt="Instagram" />
             </a>
             <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
-            <img src="/icons/linkedin-icon.svg" alt="LinkedIn" />
+            <img className="icon-linkedin" src="/icons/linkedin.svg" alt="LinkedIn" />
             </a>
           </div>
         </div>
