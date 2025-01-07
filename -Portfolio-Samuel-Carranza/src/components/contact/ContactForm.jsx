@@ -136,8 +136,8 @@ const ContactForm = () => {
 
     return (
         <>
-            <div className="">
-                <Form className="" onSubmit={handlerSubmit}>
+            <div className="container-form-section">
+                <Form className="form-container" onSubmit={handlerSubmit}>
                     <Form.Group className="form-group">
                         <Form.Label>Nombre y Apellido</Form.Label>
                         <div className='input-with-icon fullName'>

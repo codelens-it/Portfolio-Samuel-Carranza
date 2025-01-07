@@ -18,10 +18,7 @@
 .polaroid-container.large {
   width: 260px;
   height: 300px;
-}
 
-.polaroid-container:hover {
-  transform: rotate(5deg);
 }
 
 .polaroid-image {
@@ -29,16 +26,19 @@
   height: 230px;
 }
 
-.polaroid-caption {
-  margin-top: 10px;
-  font-size: 12px;
-  text-align: center;
-  color: #555;
-}
 
 @media(min-width: 768px){
 
     .polaroid-container.large {
         width: 300px;
+        transform: rotate(-5deg);
     }
+}
+
+@media(min-width: 1024px){
+
+  .polaroid-container.large {
+      width: 350px;
+      height: 360px;
+  }
 }

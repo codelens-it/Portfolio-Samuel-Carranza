@@ -41,8 +41,10 @@ const AboutMe = () => {
 
   return (
     <div className='about-me-conatiner'>
-
-      <h2><span className='underline'>Sobre</span> Mí</h2>
+      <div className='title-container'>
+          {/* <h2><span className='underline'>Sobre</span> Mí</h2> */}
+          <h2 className='title-about-me'>Sobre Mí</h2>
+      </div>
 
       <div className='first-container'>
         <div className='right-column'>

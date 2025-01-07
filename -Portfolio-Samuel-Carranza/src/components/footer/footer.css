@@ -19,7 +19,8 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    padding: 65px 20px 30px;
+    padding-top: 65px;
+    padding-bottom: 20px;
     width: 100%;
   }
 
@@ -33,6 +34,11 @@ footer {
   .logo-icon-container .logo-icon{
     width: 100%;
     height: 100%;
+  }
+
+  .footer-phrase{
+    text-align: center;
+    max-width: 70%;
   }
 
   .footer-social{
