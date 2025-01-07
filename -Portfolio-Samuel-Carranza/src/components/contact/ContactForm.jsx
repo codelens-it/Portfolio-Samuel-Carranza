@@ -27,6 +27,10 @@ const ContactForm = () => {
         shortMessage: false,
     });
 
+    const nameRegex = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{1,33}$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
     const handleChange = (event) => {
         const { name, value } = event.target;
         setFormData({
@@ -51,13 +55,13 @@ const ContactForm = () => {
 
         let formIsValid = true;
 
-        if (!name.trim()) {
+        if (!name.trim() || !nameRegex.test(name)) {
             setErrors((prevErrors) => ({ ...prevErrors, name: true }));
             nameRef.current.focus();
             formIsValid = false;
         }
 
-        if (!email.trim()) {
+        if (!email.trim() || !emailRegex.test(email)) {
             setErrors((prevErrors) => ({ ...prevErrors, email: true }));
             if (formIsValid) emailRef.current.focus();
             formIsValid = false;
