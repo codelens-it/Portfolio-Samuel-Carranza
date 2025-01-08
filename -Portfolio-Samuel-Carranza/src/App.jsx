@@ -5,6 +5,7 @@ import Navbar from './components/navbar/Navbar'
 import Hero from './components/hero/Hero'
 import Footer from './components/footer/Footer'
 import Section from './components/section/Section'
+import Experience from './components/experience/Experience'
 //import './App.css'
 
 
@@ -14,6 +15,9 @@ function App() {
     <>
       {/* <Navbar/> */}
       <Hero/>
+      <Section>
+        <Experience />
+      </Section>
       <Section>
         <AboutMe />
       </Section>

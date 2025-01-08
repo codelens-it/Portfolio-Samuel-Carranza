@@ -45,7 +45,7 @@ const Navbar = () => {
               <picture className='icon-language-container'>
                 <img className='icon-language'  src="/icons/icon-language.svg" alt="icono de mundo" />
               </picture>
-              <span className='language'>{language}</span>
+              <button className='language'>{language}</button>
             </div>
         </nav>
       </div>
