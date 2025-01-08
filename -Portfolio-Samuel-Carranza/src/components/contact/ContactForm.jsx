@@ -27,22 +27,36 @@ const ContactForm = () => {
         shortMessage: false,
     });
 
+    const nameRegex = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{1,33}$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
     const handleChange = (event) => {
         const { name, value } = event.target;
+    
         setFormData({
             ...formData,
             [name]: value,
         });
-        if (name === 'message') {
-            setErrors((prevErrors) => ({
-                ...prevErrors,
-                message: value.trim().length < 10,
-                shortMessage: value.trim().length < 10, // Muestra msj en tiempo real
-            }));
-        } else {
-            setErrors((prevErrors) => ({ ...prevErrors, [name]: false, emailMismatch: false }));
-        }
-    }
+    
+        setErrors((prevErrors) => {
+            let newErrors = { ...prevErrors };
+    
+            if (name === "name") {
+                newErrors.name = !nameRegex.test(value);
+            } else if (name === "email") {
+                newErrors.email = !emailRegex.test(value);
+            } else if (name === "emailConfirm") {
+                newErrors.emailConfirm = value.trim() === "";
+                newErrors.emailMismatch = value !== formData.email; 
+            } else if (name === "message") {
+                newErrors.message = value.trim().length < 10;
+            }
+    
+            return newErrors;
+        });
+    };
+    
 
     const handlerSubmit = (event) => {
         event.preventDefault();
@@ -51,13 +65,13 @@ const ContactForm = () => {
 
         let formIsValid = true;
 
-        if (!name.trim()) {
+        if (!name.trim() || !nameRegex.test(name)) {
             setErrors((prevErrors) => ({ ...prevErrors, name: true }));
             nameRef.current.focus();
             formIsValid = false;
         }
 
-        if (!email.trim()) {
+        if (!email.trim() || !emailRegex.test(email)) {
             setErrors((prevErrors) => ({ ...prevErrors, email: true }));
             if (formIsValid) emailRef.current.focus();
             formIsValid = false;
@@ -136,8 +150,8 @@ const ContactForm = () => {
 
     return (
         <>
-            <div className="">
-                <Form className="" onSubmit={handlerSubmit}>
+            <div className="container-form-section">
+                <Form className="form-container" onSubmit={handlerSubmit}>
                     <Form.Group className="form-group">
                         <Form.Label>Nombre y Apellido</Form.Label>
                         <div className='input-with-icon fullName'>
@@ -151,7 +165,7 @@ const ContactForm = () => {
                                 className={errors.name ? "input-error" : ""}
                             />
                         </div>
-                        {errors.name && <div className="alert alert-warning">El campo es obligatorio.</div>}
+                        {errors.name && <div className="alert alert-warning">El campo es obligatorio, solo se aceptan letras.</div>}
                     </Form.Group>
 
                     <Form.Group className="form-group">

@@ -4,6 +4,7 @@ import AboutMe from './components/aboutMe/AboutMe'
 import Navbar from './components/navbar/Navbar'
 import Hero from './components/hero/Hero'
 import Footer from './components/footer/Footer'
+import Section from './components/section/Section'
 //import './App.css'
 
 
@@ -13,8 +14,13 @@ function App() {
     <>
       <Navbar/>
       <Hero/>
-      <AboutMe />
-      <Contact />
+      <Section>
+        <AboutMe />
+      </Section>
+      <Section>
+        <Contact />
+      </Section>
+      
       <Footer />
     </>
   )
