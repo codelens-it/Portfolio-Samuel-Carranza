@@ -18,32 +18,25 @@ const toolsMock = [
 ]
 
 import React from 'react'
-
+import { useState } from 'react';
 import './aboutMe.css'
 import { Button } from 'react-bootstrap';
 import ItemTool from './ItemTool';
 import Polaroid from '../polaroid/Polaroid';
 
 const AboutMe = () => {
+  const [language, setLanguage] = useState('en'); 
 
-
-  const handleDownload = () => {
-    const link = document.createElement('a');
-    const cvEng = "public/cvs/Samuel-Carranza-CV-Eng.pdf";
-    const cvEs = "public/cvs/Samuel-Carranza-CV-ESp.pdf";
-    link.href = cvEng; // Ruta del archivo en la carpeta public
-    link.download = 'Samuel-Carranza_Curriculum.pdf'; // Nombre con el que se descargará
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+  const cvLanguage = {
+    en: "public/cvs/Samuel-Carranza-CV-Eng.pdf",
+    es: "public/cvs/Samuel-Carranza-CV-ESp.pdf"
   };
-
 
   return (
     <div className='about-me-conatiner'>
       <div className='title-container'>
-          {/* <h2><span className='underline'>Sobre</span> Mí</h2> */}
-          <h2 className='title-about-me'>Sobre Mí</h2>
+        {/* <h2><span className='underline'>Sobre</span> Mí</h2> */}
+        <h2 className='title-about-me'>Sobre Mí</h2>
       </div>
 
       <div className='first-container'>
@@ -58,7 +51,9 @@ const AboutMe = () => {
 
       <div className='second-container'>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus sed massa nec auctor. </p>
-        <Button className="button-cv" onClick={handleDownload}>Descargar CV</Button>
+        <a href={cvLanguage[language]} download={`Samuel-Carranza-CV-${language}.pdf`}>
+          <Button className="button-cv">Descargar CV</Button>
+        </a>
       </div>
 
       <div className='third-container'>
