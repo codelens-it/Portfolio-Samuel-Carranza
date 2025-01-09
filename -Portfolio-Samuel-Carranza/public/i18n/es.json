@@ -16,18 +16,11 @@
 },
 "experience": [
   {
-    "name": "Investigación -FONDO UCA 'La situación de la población adulta mayor salvadoreña a inicios de la década del envejecimiento saludable'",
-    "company": "UCA - Universidad Centroamericana José Simeón Cañas",
-    "start-date": "Enero 2022",
-    "end-date": "Octubre 2023",
-    "summary": "Búsqueda y recolección de datos. Redacción de documentos técnicos/científicos. Desarrollo metodológico y construcción de herramientas de recolección de información. Investigación de campo/ recolección de datos. Construcción de artículo científico"
-  },
-  {
-    "name": "Instructoría y coordinación de prácticas profesionales de estudiantes de comunicaciones",
-    "company": "UCA - Universidad Centroamericana José Simeón Cañas",
-    "start-date": "Agosto 2023",
-    "end-date": "Diciembre 2023",
-    "summary": "Instructoría de contenido teórico y práctico en desarrollo de procesos de diagnóstico y comunicación interna. Seguimiento y evaluación de estudiantes desempeñando prácticas profesionales. Acompañamiento y correción de campañas y estrategias propuestas por estudiantes."
+    "name": "Copywriter",
+    "company": "Publisoft",
+    "start-date": "Julio 2024",
+    "end-date": "Actualidad",
+    "summary": "Investigación de palabras clave. Creación de contenido SEO. Gestión de Google Search Console. Gestión de Ahrefs. Optimización web UX/UI. Diseño e implementación de estrategias de crecimiento."
   },
   {
     "name": "Video Editor",
@@ -37,11 +30,18 @@
     "summary": "Traducción de contenido. Edición de video. Investigación de palabras clave para miniaturas. Edición de sonido."
   },
   {
-    "name": "Copywriter",
-    "company": "Publisoft",
-    "start-date": "Julio 2024",
-    "end-date": "Actualidad",
-    "summary": "Investigación de palabras clave. Creación de contenido SEO. Gestión de Google Search Console. Gestión de Ahrefs. Optimización web UX/UI. Diseño e implementación de estrategias de crecimiento."
+    "name": "Instructoría y coordinación de prácticas profesionales de estudiantes de comunicaciones",
+    "company": "UCA - Universidad Centroamericana José Simeón Cañas",
+    "start-date": "Agosto 2023",
+    "end-date": "Diciembre 2023",
+    "summary": "Instructoría de contenido teórico y práctico en desarrollo de procesos de diagnóstico y comunicación interna. Seguimiento y evaluación de estudiantes desempeñando prácticas profesionales. Acompañamiento y correción de campañas y estrategias propuestas por estudiantes."
+  },
+  {
+    "name": "Investigación -FONDO UCA 'La situación de la población adulta mayor salvadoreña a inicios de la década del envejecimiento saludable'",
+    "company": "UCA - Universidad Centroamericana José Simeón Cañas",
+    "start-date": "Enero 2022",
+    "end-date": "Octubre 2023",
+    "summary": "Búsqueda y recolección de datos. Redacción de documentos técnicos/científicos. Desarrollo metodológico y construcción de herramientas de recolección de información. Investigación de campo/ recolección de datos. Construcción de artículo científico"
   }
 ],
 "about": {
