@@ -191,4 +191,10 @@
             justify-content: flex-start;
             padding-right: 70px;
         }   
-}
+    }
+
+    @media (min-width: 800px) {
+        .title-container-experience h2{
+            font-size: 50px;
+        }
+    }
