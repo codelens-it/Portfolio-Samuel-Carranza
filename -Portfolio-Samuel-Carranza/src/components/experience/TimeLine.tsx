@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react';
-import './experience.css';
+import React, { useEffect, useRef } from 'react'
+import './experience.css'
 
 interface ExperienceItem {
   name: string;
