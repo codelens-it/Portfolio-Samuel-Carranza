@@ -1,14 +1,19 @@
 import Photography from '../photography/Photography'
 import Videos from '../videos/Videos'
+import './portfolio.css'
 
-Portfolio = () => {
+const Portfolio = () => {
 
 return(
-<section id='portfolio'>
-  <h2>Portfolio</h2>
+<>
+  <div className="title-container-portfolio">
+    <h2 className='title-portfolio'>Portfolio</h2>
+  </div>
   <Photography/>
   <Videos/>
-</section>
+</>
 
 )
 }
+
+export default Portfolio;
