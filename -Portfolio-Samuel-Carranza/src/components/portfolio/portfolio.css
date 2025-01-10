@@ -1,0 +1,23 @@
+h2.title-portfolio {
+  display: block;
+  position: relative;
+  text-align: center;
+  color: var(--white);
+  font-size: 3rem;
+}
+
+h2.title-portfolio::after{
+  content: "";
+  position: absolute;
+  bottom: 0; /* Coloca la línea justo debajo del texto */
+  left: 50px;
+  width: 150px; 
+  transform: translateX(-30%);/* Haz que la línea ocupe todo el ancho del texto */
+  height: 2px; /* Grosor de la línea */
+  background-color: var(--darkred);
+}
+
+.title-container-portfolio{
+  width: 100%;
+  height: auto;
+}

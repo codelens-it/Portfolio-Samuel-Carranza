@@ -6,17 +6,20 @@ import Hero from './components/hero/Hero'
 import Footer from './components/footer/Footer'
 import Section from './components/section/Section'
 import Experience from './components/experience/Experience'
-//import './App.css'
+import Portfolio from './components/portfolio/Portfolio'
 
 
 function App() {
 
   return (
-    <>
+   <>
       <Navbar/>
       <Hero/>
       <Section>
         <Experience />
+      </Section>
+      <Section>
+        <Portfolio/>
       </Section>
       <Section>
         <AboutMe />
@@ -24,7 +27,6 @@ function App() {
       <Section>
         <Contact />
       </Section>
-      
       <Footer />
     </>
   )
