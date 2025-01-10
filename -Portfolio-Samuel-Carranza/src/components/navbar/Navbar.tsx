@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
+import { useLanguage } from '../../constants/LanguageContext';
 import './navbar.css'; 
+import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
-  const [language, setLanguage] = useState('ES');
-
-  const handleLanguageToggle = () => {
-    setLanguage((prevLang) => (prevLang === 'ES' ? 'EN' : 'ES'));
-  };
-
-    const [menuOpen, setMenuOpen] = useState(false);
+  const { t, i18n } = useTranslation(); // Hook para traducción
+  const [menuOpen, setMenuOpen] = useState(false);
   
     const toggleMenu = () => {
       setMenuOpen(!menuOpen);
@@ -21,6 +18,11 @@ const Navbar = () => {
   
     const closeMenuOnClick = () => {
       setMenuOpen(false);
+    };
+
+    const handleLanguageToggle = () => {
+      const newLang = i18n.language === 'es' ? 'en' : 'es';
+      i18n.changeLanguage(newLang); // Cambia el idioma
     };
 
   return (
@@ -36,16 +38,16 @@ const Navbar = () => {
           <img src="/Logo-completo.svg" alt="Logo Samuel Carranza" />
         </a>
         <nav>
-            <a href="#inicio">Inicio</a>
-            <a href="#sobre-mi">Sobre Mí</a>
-            <a href="#experiencia">Experiencia</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contacto">Contacto</a>
+            <a href="#inicio">{t('titles.home')}</a>
+            <a href="#sobre-mi">{t('titles.about')}</a>
+            <a href="#experiencia">{t('titles.experience')}</a>
+            <a href="#portfolio">{t('titles.portfolio')}</a>
+            <a href="#contacto">{t('titles.navbar-contact')}</a>
             <div className="navbar-language" onClick={handleLanguageToggle}>
               <picture className='icon-language-container'>
                 <img className='icon-language'  src="/icons/icon-language.svg" alt="icono de mundo" />
               </picture>
-              <span className='language'>{language}</span>
+              <button className="language">{i18n.language.toUpperCase()}</button>
             </div>
         </nav>
       </div>

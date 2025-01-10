@@ -16,18 +16,11 @@
   },
   "experience": [
     {
-      "name": "Research - UCA FUND Project",
-      "company": "UCA - Universidad Centroamericana José Simeón Cañas",
-      "start-date": "January 2022",
-      "end-date": "October 2023",
-      "summary": "Data collection and analysis. Technical/scientific document writing. Methodological development. Field research. Scientific article writing."
-    },
-    {
-      "name": "Teaching Assistant and Professional Practice Coordinator",
-      "company": "UCA - Universidad Centroamericana José Simeón Cañas",
-      "start-date": "August 2023",
-      "end-date": "December 2023",
-      "summary": "Teaching theoretical and practical content in internal communication processes. Monitoring and evaluating student internships. Supporting and reviewing student campaigns and strategies."
+      "name": "Copywriter",
+      "company": "Publisoft",
+      "start-date": "July 2024",
+      "end-date": "As of today",
+      "summary": "Research of Key words. SEO content creator. Google Search console management. Ahrefs management. Web optimization UX/UI. Desing and implementation of growing strategies."
     },
     {
       "name": "Video Editor",
@@ -37,11 +30,18 @@
       "summary": "Translation of content. Script copywriting. Video editing. Research of Keywords for thumbnails. Sound editing."
     },
     {
-      "name": "Copywriter",
-      "company": "Publisoft",
-      "start-date": "July 2024",
-      "end-date": "As of today",
-      "summary": "Research of Key words. SEO content creator. Google Search console management. Ahrefs management. Web optimization UX/UI. Desing and implementation of growing strategies."
+      "name": "Teaching Assistant and Professional Practice Coordinator",
+      "company": "UCA - Universidad Centroamericana José Simeón Cañas",
+      "start-date": "August 2023",
+      "end-date": "December 2023",
+      "summary": "Teaching theoretical and practical content in internal communication processes. Monitoring and evaluating student internships. Supporting and reviewing student campaigns and strategies."
+    },  
+    {
+      "name": "Research - UCA FUND Project",
+      "company": "UCA - Universidad Centroamericana José Simeón Cañas",
+      "start-date": "January 2022",
+      "end-date": "October 2023",
+      "summary": "Data collection and analysis. Technical/scientific document writing. Methodological development. Field research. Scientific article writing."
     }
   ],
   "about": {
@@ -65,4 +65,4 @@
     "media-contact-message": "Contact me on my social media",
     "copyright": "@2025 Developed by CodeLens"
   }
-  }
+}

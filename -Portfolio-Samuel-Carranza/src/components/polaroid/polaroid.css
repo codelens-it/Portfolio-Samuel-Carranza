@@ -8,17 +8,20 @@
   padding: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transform: rotate(0deg);
-  width: 150px;
 }
 
 .polaroid-container.small {
-  width: 150px;
+  width: 200px;
+  height: 250px;
+}
+
+.polaroid-container.small .polaroid-image {
+  height: 180px;
 }
 
 .polaroid-container.large {
   width: 260px;
   height: 300px;
-
 }
 
 .polaroid-image {
