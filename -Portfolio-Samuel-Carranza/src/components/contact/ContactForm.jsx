@@ -1,229 +1,218 @@
-import React from 'react'
-import { Form, Button } from 'react-bootstrap'
-import { useState, useRef } from 'react';
+import React from "react";
+import { Form, Button } from "react-bootstrap";
+import { useState, useRef } from "react";
 import "./contact.css";
-
+import Modal from "./Modal";
 
 const ContactForm = () => {
+  const nameRef = useRef(null);
+  const emailRef = useRef(null);
+  const messageRef = useRef(null);
+  
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [msjApi, setMsjApi] = useState({
+    title: "",
+    text: ""
+  })
 
-    const nameRef = useRef(null);
-    const emailRef = useRef(null);
-    const emailConfirmRef = useRef(null);
-    const messageRef = useRef(null);
+  const closeModal = () => setModalIsOpen(false);
 
-    const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const [errors, setErrors] = useState({
+    name: false,
+    email: false,
+    emailMismatch: false,
+    message: false,
+    shortMessage: false,
+  });
+
+  const nameRegex = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{1,33}$/;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+
+    setErrors((prevErrors) => {
+      let newErrors = { ...prevErrors };
+
+      if (name === "name") {
+        newErrors.name = !nameRegex.test(value);
+      } else if (name === "email") {
+        newErrors.email = !emailRegex.test(value);
+      } else if (name === "message") {
+        newErrors.message = value.trim().length < 10;
+      }
+
+      return newErrors;
+    });
+  };
+
+  const handlerSubmit = (event) => {
+    event.preventDefault();
+
+    const { name, email, message } = formData;
+    let formIsValid = true;
+
+    if (!name.trim() || !nameRegex.test(name)) {
+      setErrors((prevErrors) => ({ ...prevErrors, name: true }));
+      nameRef.current.focus();
+      formIsValid = false;
+    }
+
+    if (!email.trim() || !emailRegex.test(email)) {
+      setErrors((prevErrors) => ({ ...prevErrors, email: true }));
+      if (formIsValid) emailRef.current.focus();
+      formIsValid = false;
+    }
+
+    if (!message.trim() || message.length < 10) {
+      setErrors((prevErrors) => ({ ...prevErrors, message: true }));
+      if (formIsValid) messageRef.current.focus();
+      formIsValid = false;
+    }
+
+    if (message.length < 10) {
+      setErrors((prevErrors) => ({ ...prevErrors, shortMessage: true }));
+      if (formIsValid) messageRef.current.focus();
+      formIsValid = false;
+    }
+
+    if (formIsValid) {
+      //Enviar Mail a SAMUEL
+      sendEmail(event);
+      console.log(formData);
+
+      // Reinicia los campos
+      setFormData({
         name: "",
         email: "",
-        emailConfirm: "",
         message: "",
+      });
+    }
+  };
+
+  //! Envio al mail de Samuel.
+  const [result, setResult] = useState("");
+
+  const sendEmail = async (event) => {
+    event.preventDefault();
+    const { name, email } = formData; 
+    setResult("Sending....");
+    const formDatas = new FormData(event.target);
+
+    //!!! Aca va el codigo que se saca de la pagina: https://web3forms.com/#start
+    //!! Se pone el mail y llegua a un correo con el codigo = access_key... y ya esta.
+    formDatas.append("access_key", "ac53b12c-4486-4966-8cbe-e04c171a0f51");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formDatas,
     });
 
-    const [errors, setErrors] = useState({
-        name: false,
-        email: false,
-        emailConfirm: false,
-        emailMismatch: false,
-        message: false,
-        shortMessage: false,
-    });
+    const data = await response.json();
 
-    const nameRegex = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{1,33}$/;
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+      //!Modal de exito
+      setModalIsOpen(true);
+      setMsjApi({
+        title: "¡Envío Exitoso!",
+        text: `${name}, tu mensaje ha sido enviado correctamente a Samuel Carranza desde el email ${email}. Muchas gracias por escribirme. Me pondré en contacto contigo a la brevedad.`
+      });      
+    } else {
+      //!modal de error
+      setModalIsOpen(true);
+      setMsjApi({
+        title: "Error en el envío",
+        text: `${name}, no se pudo enviar tu mensaje a Samuel Carranza desde el email ${email}. Por favor, inténtalo nuevamente más tarde o contáctame directamente a través de otro medio. Lamento las molestias.`
+      });
+      console.log("Error", data);
+      setResult(data.message);
+      
+    }
+  };
 
-
-    const handleChange = (event) => {
-        const { name, value } = event.target;
-    
-        setFormData({
-            ...formData,
-            [name]: value,
-        });
-    
-        setErrors((prevErrors) => {
-            let newErrors = { ...prevErrors };
-    
-            if (name === "name") {
-                newErrors.name = !nameRegex.test(value);
-            } else if (name === "email") {
-                newErrors.email = !emailRegex.test(value);
-            } else if (name === "emailConfirm") {
-                newErrors.emailConfirm = value.trim() === "";
-                newErrors.emailMismatch = value !== formData.email; 
-            } else if (name === "message") {
-                newErrors.message = value.trim().length < 10;
-            }
-    
-            return newErrors;
-        });
-    };
-    
-
-    const handlerSubmit = (event) => {
-        event.preventDefault();
-
-        const { name, email, emailConfirm, message } = formData;
-
-        let formIsValid = true;
-
-        if (!name.trim() || !nameRegex.test(name)) {
-            setErrors((prevErrors) => ({ ...prevErrors, name: true }));
-            nameRef.current.focus();
-            formIsValid = false;
-        }
-
-        if (!email.trim() || !emailRegex.test(email)) {
-            setErrors((prevErrors) => ({ ...prevErrors, email: true }));
-            if (formIsValid) emailRef.current.focus();
-            formIsValid = false;
-        }
-
-        if (!emailConfirm.trim()) {
-            setErrors((prevErrors) => ({ ...prevErrors, emailConfirm: true }));
-            if (formIsValid) emailConfirmRef.current.focus();
-            formIsValid = false;
-        }
-
-        if (email !== emailConfirm) {
-            setErrors((prevErrors) => ({ ...prevErrors, emailMismatch: true }));
-            if (formIsValid) emailConfirmRef.current.focus();
-            formIsValid = false;
-        }
-
-        if (!message.trim() || message.length < 10) {
-            setErrors((prevErrors) => ({ ...prevErrors, message: true }));
-            if (formIsValid) messageRef.current.focus();
-            formIsValid = false;
-        }
-
-        if (message.length < 10) {
-            setErrors((prevErrors) => ({ ...prevErrors, shortMessage: true }));
-            if (formIsValid) messageRef.current.focus();
-            formIsValid = false;
-        }
-
-
-        if (formIsValid) {
-            //Enviar Mail a SAMUEL
-            sendEmail(event);
-            alert("Formulario enviado correctamente");
-            console.log(formData);
-
-            // Reinicia los campos
-            setFormData({
-                name: "",
-                email: "",
-                emailConfirm: "",
-                message: "",
-            });
-        }
-    };
-
-
-    //! Envio al mail de Samuel.
-    const [result, setResult] = useState("");
-
-    const sendEmail = async (event) => {
-        event.preventDefault();
-        setResult("Sending....");
-        const formData = new FormData(event.target);
-
-        //!!! Aca va el codigo que se saca de la pagina: https://web3forms.com/#start 
-        //!! Se pone el mail y llegua a un correo con el codigo... y ya esta.
-        formData.append("access_key", "ac53b12c-4486-4966-8cbe-e04c171a0f51"); 
-
-        const response = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            body: formData
-        });
-
-        const data = await response.json();
-
-        if (data.success) {
-            setResult("Form Submitted Successfully");
-            event.target.reset();
-        } else {
-            console.log("Error", data);
-            setResult(data.message);
-        }
-    };
-
-
-    return (
-        <>
-            <div className="container-form-section">
-                <Form className="form-container" onSubmit={handlerSubmit}>
-                    <Form.Group className="form-group">
-                        <Form.Label>Nombre y Apellido</Form.Label>
-                        <div className='input-with-icon fullName'>
-                            <Form.Control
-                                ref={nameRef}
-                                name="name"
-                                type="text"
-                                placeholder="Ingresa tu nombre y apellido"
-                                value={formData.name}
-                                onChange={handleChange}
-                                className={errors.name ? "input-error" : ""}
-                            />
-                        </div>
-                        {errors.name && <div className="alert alert-warning">El campo es obligatorio, solo se aceptan letras.</div>}
-                    </Form.Group>
-
-                    <Form.Group className="form-group">
-                        <Form.Label>Email</Form.Label>
-                        <div className='input-with-icon email'>
-                            <Form.Control
-                                ref={emailRef}
-                                name="email"
-                                type="email"
-                                placeholder="Ingresa tu email"
-                                value={formData.email}
-                                onChange={handleChange}
-                                className={errors.email ? "input-error" : ""}
-                            />
-                        </div>
-                        {errors.email && <div className="alert alert-warning">El email es obligatorio.</div>}
-                    </Form.Group>
-
-                    <Form.Group className="form-group">
-                        <Form.Label>Confirmación del Email</Form.Label>
-                        <div className='input-with-icon email'>
-                            <Form.Control
-                                ref={emailConfirmRef}
-                                name="emailConfirm"
-                                type="email"
-                                placeholder="Confirma tu email"
-                                value={formData.emailConfirm}
-                                onChange={handleChange}
-                                className={errors.emailConfirm ? "input-error" : ""}
-                            />
-                        </div>
-                        {errors.emailConfirm && <div className="alert alert-warning">La confirmación de email es obligatoria.</div>}
-                        {errors.emailMismatch && <div className="alert alert-warning">Los emails no coinciden.</div>}
-                    </Form.Group> 
-
-                    <Form.Group className="form-group">
-                        <Form.Label>Mensaje</Form.Label>
-                        <Form.Control
-                            ref={messageRef}
-                            name="message"
-                            as="textarea"
-                            placeholder="Escriba tu mensaje aquí"
-                            value={formData.message}
-                            onChange={handleChange}
-                            className={errors.message ? "input-error" : ""}
-                            maxLength={200}
-                        />
-                        {errors.message && <div className="alert alert-warning">El mensaje debe tener al menos 10 caracteres.</div>}
-
-                    </Form.Group>
-
-                    <Button type="submit" variant="primary" className='contact-button' >
-                        Enviar
-                    </Button>
-                </Form>
+  return (
+    <>
+      <div className="container-form-section">
+        <Form className="form-container" onSubmit={handlerSubmit}>
+          <Form.Group className="form-group">
+            <Form.Label>Nombre y Apellido</Form.Label>
+            <div className="input-with-icon fullName">
+              <Form.Control
+                ref={nameRef}
+                name="name"
+                type="text"
+                placeholder="Ingresa tu nombre y apellido"
+                value={formData.name}
+                onChange={handleChange}
+                className={errors.name ? "input-error" : ""}
+              />
             </div>
-        </>
-    )
-}
+            {errors.name && (
+              <div className="alert alert-warning">
+                El campo es obligatorio, solo se aceptan letras.
+              </div>
+            )}
+          </Form.Group>
 
-export default ContactForm
+          <Form.Group className="form-group">
+            <Form.Label>Email</Form.Label>
+            <div className="input-with-icon email">
+              <Form.Control
+                ref={emailRef}
+                name="email"
+                type="email"
+                placeholder="Ingresa tu email"
+                value={formData.email}
+                onChange={handleChange}
+                className={errors.email ? "input-error" : ""}
+              />
+            </div>
+            {errors.email && (
+              <div className="alert alert-warning">
+                El email es obligatorio.
+              </div>
+            )}
+          </Form.Group>
+
+          <Form.Group className="form-group">
+            <Form.Label>Mensaje</Form.Label>
+            <Form.Control
+              ref={messageRef}
+              name="message"
+              as="textarea"
+              placeholder="Escriba tu mensaje aquí"
+              value={formData.message}
+              onChange={handleChange}
+              className={errors.message ? "input-error" : ""}
+              maxLength={200}
+            />
+            {errors.message && (
+              <div className="alert alert-warning">
+                El mensaje debe tener al menos 10 caracteres.
+              </div>
+            )}
+          </Form.Group>
+          <Button type="submit" variant="primary" className="contact-button">
+            Enviar
+          </Button>
+          {modalIsOpen && <Modal text={msjApi.text} title={msjApi.title} onClose={modalIsOpen} onCloseModal={closeModal}/>}
+        </Form>
+      </div>
+    </>
+  );
+};
+
+export default ContactForm;
