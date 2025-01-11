@@ -2,14 +2,11 @@ import React from "react";
 import Slider from "./Slider";
 
 const Sliders = () => {
-  const mockImgs = [
-    "public/polaroids-prueba/polaroid1.webp",
-    "public/polaroids-prueba/polaroid2.webp",
-    "public/polaroids-prueba/polaroid3.webp",
-  ];
+  const imgsSlider = ["polaroid1", "polaroid2", "polaroid3"];
+
   return (
     <div>
-      <Slider imgs={mockImgs} />
+      <Slider imgs={imgsSlider} />
     </div>
   );
 };

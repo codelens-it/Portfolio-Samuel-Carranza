@@ -22,7 +22,7 @@ const Slider = ({ imgs }) => {
       nextImg();
     }, 2800); // 3s
 
-    return () => clearInterval(interval); 
+    return () => clearInterval(interval);
   }, [currentImg, quantity]);
 
   return (
@@ -30,11 +30,17 @@ const Slider = ({ imgs }) => {
       <button className="btn-slider" onClick={prevImg}>
         {"<-"}
       </button>
-      {imgs.map((img, i) => (
-        <div className={currentImg === i ? "slide active" : "slide"} key={img}>
-          {i === currentImg && <img key={img} src={img} alt={"img ${i}"} />}
-        </div>
-      ))}
+      {imgs.map((img, i) => {
+        const src = "public/polaroids-prueba/" + img + ".webp";
+        return (
+          <div
+            className={currentImg === i ? "slide active" : "slide"}
+            key={img}
+          >
+            {i === currentImg && <img key={src} src={src} alt={"img" +src} />}
+          </div>
+        );
+      })}
       <button className="btn-slider" onClick={nextImg}>
         {"->"}
       </button>
