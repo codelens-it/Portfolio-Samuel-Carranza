@@ -1,5 +1,5 @@
 import Photography from '../photography/Photography'
-import Videos from '../videos/Videos'
+import Gallery from '../gallery/Gallery'
 import './portfolio.css'
 
 const Portfolio = () => {
@@ -10,7 +10,7 @@ return(
     <h2 className='title-portfolio'>Portfolio</h2>
   </div>
   <Photography/>
-  <Videos/>
+  <Gallery/>
 </>
 
 )

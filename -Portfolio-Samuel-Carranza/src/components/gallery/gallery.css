@@ -1,0 +1,12 @@
+.masonry {
+  columns: 5 200px;
+  gap: 10px;
+}
+
+.item  {
+  width: 100%;
+  height: auto;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  border: 0.1em solid var(--darkslategray);
+}
