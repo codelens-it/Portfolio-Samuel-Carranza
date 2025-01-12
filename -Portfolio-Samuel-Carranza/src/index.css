@@ -16,4 +16,5 @@
 html{
   font-family: "Roboto", serif;
   background-color: var(--black);
+  overflow-x: hidden;
 }
