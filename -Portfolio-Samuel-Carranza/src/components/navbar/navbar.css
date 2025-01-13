@@ -29,7 +29,7 @@ body.open .background {
 }
 
 .navbar {
-  z-index: 1;
+  z-index: 10;
   top: 0;
   left: 0;
   display: flex;
@@ -42,7 +42,7 @@ body.open .background {
 }
 
 .navbar-burger {
-  z-index: 3;
+  z-index: 30;
   top: 10px;
   right: 15px;
   display: grid;
@@ -62,7 +62,7 @@ body.open .navbar-burger {
 }
 
 .menu {
-  z-index: 2;
+  z-index: 20;
   top: 0;
   left: 0;
   display: grid;

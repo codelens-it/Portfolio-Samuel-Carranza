@@ -12,6 +12,9 @@ const Modal = ({text, title, onClose, onCloseModal}) => {
   return (
     <div className={onClose?("modal is-open"):("modal")} >
       <div className="modal-conteiner">
+        <picture className="logo-container-modal">
+          <img className="logo-modal" src="/logo-completo-gris.svg" alt="logo Samuel Carranza" />
+        </picture>
         <h2>{title}</h2>
         <p>{text}</p>
         <button className="modal-cloes" onClick={onCloseModal}>Cerrar</button>
