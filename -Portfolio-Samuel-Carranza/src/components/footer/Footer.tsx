@@ -1,7 +1,9 @@
 import React from "react";
 import "./Footer.css"; // Archivo CSS externo
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t, i18n } = useTranslation(); // Hook para traducción
   return (
     <footer>
       <div className="foteer-container">
@@ -9,10 +11,10 @@ const Footer = () => {
             <a href="#" className="logo-icon-container">
                 <img className="logo-icon" src="/Logo-completo.svg" alt="Logo Samuel Carranza" />
             </a>      
-            <span className="footer-phrase">Pasión por cada detalle, perfección en cada frame.</span>
+            <span className="footer-phrase">{t('footer.slogan')}</span>
         </div>
         <div className="footer-social">
-            <span>Contáctame por redes</span>
+            <span>{t('footer.media-contact-message')}</span>
           <div className="container-redes">
              <a href="https://www.instagram.com/femt_10?igsh=MWxteGdiZnd2amkzaw==" target="_blank" aria-label="Twitter">
             <img className="icon-instagram" src="/icons/instagram.svg" alt="Instagram" />
@@ -25,19 +27,19 @@ const Footer = () => {
         <div className="footer-nav">
             <nav>
                 <div className="links">
-                    <a href="#inicio">Inicio</a>
-                    <a href="#sobre-mi">Sobre Mí</a>
-                    <a href="#experiencia">Experiencia</a>
+                  <a href="#inicio">{t('titles.home')}</a>
+                  <a href="#sobre-mi">{t('titles.about')}</a>
+                  <a href="#experiencia">{t('titles.experience')}</a>
                 </div>
                 <div className="links">                   
-                    <a href="#portfolio">Portfolio</a>
-                    <a href="#contacto">Contacto</a>
+                  <a href="#portfolio">{t('titles.portfolio')}</a>
+                  <a href="#contacto">{t('titles.navbar-contact')}</a>
                 </div>
             </nav>
         </div>
       </div>
       <div className="copyright">
-        <span className="copyright-content">©2025 Desarrollado por CodeLens</span>
+        <span className="copyright-content">{t('footer.copyright')}</span>
       </div>
     </footer>
   );

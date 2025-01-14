@@ -290,19 +290,36 @@ textarea:focus {
 }
 
 .modal-conteiner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     position  : relative;
-    min-width : 320px;
+    min-width : 280px;
     max-width : 480px;
     min-height: 200px;
     max-height: 600px;
     overflow-y: auto;
     border-radius: 20px;
-    padding: 1rem;
-
+    padding: 1.9rem;
     background-color: var(--white);
 }
+
+.logo-container-modal{
+    margin: 0;
+    padding: 0;
+}
+
+.logo-modal{
+    width: 180px;
+    margin: 0;
+    padding: 0;
+}
 .modal p{
-    color: var(--midnightblue)
+    color: var(--midnightblue);
+    text-align: center;
+    line-height: 25px;
 }
 
 .modal-cloes {
