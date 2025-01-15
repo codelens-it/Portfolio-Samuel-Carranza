@@ -45,6 +45,18 @@
   height: auto;
 }
 
+.hero-text div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.camera-icon{
+  transform: rotate(15deg);
+  animation: float 2s ease-in-out infinite, flash 2s linear infinite;
+}
+
 .hero-media {
 display: flex;
 justify-content: center;
@@ -68,4 +80,31 @@ gap: 5px;
 .media-logo:hover {
 transform:  scale(1.1);
 transition: 0.3s all;
+}
+
+
+/* Animación de flotación */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(15deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(15deg);
+  }
+}
+
+/* Efecto de flash */
+@keyframes flash {
+  0%, 90% {
+    opacity: 1;
+    filter: brightness(1);
+  }
+  95% {
+    opacity: 0.8;
+    filter: brightness(2.5);
+  }
+  100% {
+    opacity: 1;
+    filter: brightness(5);
+  }
 }

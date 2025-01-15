@@ -33,7 +33,7 @@ const AboutMe = () => {
   };
 
   return (
-    <div className='about-me-conatiner'>
+    <div id='about' className='about-me-conatiner'>
       <div className='title-container'>
         {/* <h2><span className='underline'>Sobre</span> Mí</h2> */}
         <h2 className='title-about-me'>Sobre Mí</h2>
