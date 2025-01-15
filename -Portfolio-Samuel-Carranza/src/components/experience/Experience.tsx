@@ -20,7 +20,7 @@ const Experience = () => {
   const experiences = t("experience", { returnObjects: true }) as ExperienceItem[];
 
   return (
-    <div className="Experience-container">
+    <div id="experience" className="Experience-container">
         <div className="title-container-experience">
             <h2>{t('titles.experience')}</h2>
         </div>
