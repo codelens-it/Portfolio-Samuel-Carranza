@@ -3,17 +3,25 @@ import { Form, Button } from "react-bootstrap";
 import { useState, useRef } from "react";
 import "./contact.css";
 import Modal from "./Modal";
+import { useTranslation } from "react-i18next";
 
 const ContactForm = () => {
   const nameRef = useRef(null);
   const emailRef = useRef(null);
   const messageRef = useRef(null);
-  
+  const { t, i18n } = useTranslation(); // Hook para traducción
+
+  const Modal1Text1 = t("modal1.text1") 
+  const Modal1Text2 = t("modal1.text2") 
+  const Modal2Text1 = t("modal2.text1") 
+  const Modal2Text2 = t("modal2.text2") 
+
+
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [msjApi, setMsjApi] = useState({
     title: "",
-    text: ""
-  })
+    text: "",
+  });
 
   const closeModal = () => setModalIsOpen(false);
 
@@ -106,7 +114,7 @@ const ContactForm = () => {
 
   const sendEmail = async (event) => {
     event.preventDefault();
-    const { name, email } = formData; 
+    const { name, email } = formData;
     setResult("Sending....");
     const formDatas = new FormData(event.target);
 
@@ -127,19 +135,18 @@ const ContactForm = () => {
       //!Modal de exito
       setModalIsOpen(true);
       setMsjApi({
-        title: "¡Envío Exitoso!",
-        text: `${name}, tu mensaje ha sido enviado correctamente a Samuel Carranza desde el email ${email}. Muchas gracias por escribirme. Me pondré en contacto contigo a la brevedad.`
-      });      
+        title: t("modal1.title"),
+        text: `${name}${Modal1Text1}${email}${Modal1Text2}`,
+      });
     } else {
       //!modal de error
       setModalIsOpen(true);
       setMsjApi({
-        title: "Error en el envío",
-        text: `${name}, no se pudo enviar tu mensaje a Samuel Carranza desde el email ${email}. Por favor, inténtalo nuevamente más tarde o contáctame directamente a través de otro medio. Lamento las molestias.`
+        title: t("modal2.title"),
+        text: `${name}${Modal2Text1}${email}${Modal2Text2}`,
       });
       console.log("Error", data);
       setResult(data.message);
-      
     }
   };
 
@@ -148,13 +155,13 @@ const ContactForm = () => {
       <div className="container-form-section">
         <Form className="form-container" onSubmit={handlerSubmit}>
           <Form.Group className="form-group">
-            <Form.Label>Nombre y Apellido</Form.Label>
+            <Form.Label>{t("contact-form.full-name")}</Form.Label>
             <div className="input-with-icon fullName">
               <Form.Control
                 ref={nameRef}
                 name="name"
                 type="text"
-                placeholder="Ingresa tu nombre y apellido"
+                placeholder={t("contact-form.name-placeholder")}
                 value={formData.name}
                 onChange={handleChange}
                 className={errors.name ? "input-error" : ""}
@@ -162,19 +169,19 @@ const ContactForm = () => {
             </div>
             {errors.name && (
               <div className="alert alert-warning">
-                El campo es obligatorio, solo se aceptan letras.
+                {t("contact-form.errorName")}
               </div>
             )}
           </Form.Group>
 
           <Form.Group className="form-group">
-            <Form.Label>Email</Form.Label>
+            <Form.Label>{t("contact-form.email")}</Form.Label>
             <div className="input-with-icon email">
               <Form.Control
                 ref={emailRef}
                 name="email"
                 type="email"
-                placeholder="Ingresa tu email"
+                placeholder={t("contact-form.email-placeholder")}
                 value={formData.email}
                 onChange={handleChange}
                 className={errors.email ? "input-error" : ""}
@@ -182,18 +189,18 @@ const ContactForm = () => {
             </div>
             {errors.email && (
               <div className="alert alert-warning">
-                El email es obligatorio.
+                {t("contact-form.errorEmail")}
               </div>
             )}
           </Form.Group>
 
           <Form.Group className="form-group">
-            <Form.Label>Mensaje</Form.Label>
+            <Form.Label>{t("contact-form.message")}</Form.Label>
             <Form.Control
               ref={messageRef}
               name="message"
               as="textarea"
-              placeholder="Escriba tu mensaje aquí"
+              placeholder={t("contact-form.message-placeholder")}
               value={formData.message}
               onChange={handleChange}
               className={errors.message ? "input-error" : ""}
@@ -201,14 +208,21 @@ const ContactForm = () => {
             />
             {errors.message && (
               <div className="alert alert-warning">
-                El mensaje debe tener al menos 10 caracteres.
+                {t("contact-form.errorMsj")}
               </div>
             )}
           </Form.Group>
           <Button type="submit" variant="primary" className="contact-button">
             Enviar
           </Button>
-          {modalIsOpen && <Modal text={msjApi.text} title={msjApi.title} onClose={modalIsOpen} onCloseModal={closeModal}/>}
+          {modalIsOpen && (
+            <Modal
+              text={msjApi.text}
+              title={msjApi.title}
+              onClose={modalIsOpen}
+              onCloseModal={closeModal}
+            />
+          )}
         </Form>
       </div>
     </>
