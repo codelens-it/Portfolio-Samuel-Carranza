@@ -1,68 +1,82 @@
 {
-"titles": {
-  "home": "Inicio",
-  "experience": "Experiencia",
-  "portfolio": "Portfolio",
-  "photography": "Fotografías",
-  "video-editing": "Edición de videos",
-  "about": "Sobre Mí",
-  "tools": "Herramientas",
-  "navbar-contact": "Contacto",
-  "title-contact": "Contáctcame"
-},
-"home": {
-  "greeting": "¡Hola! Soy Samuel Carranza",
-  "role": "Fotógrafo -  Editor de videos"
-},
-"experience": [
-  {
-    "name": "Copywriter",
-    "company": "Publisoft",
-    "start-date": "Julio 2024",
-    "end-date": "Actualidad",
-    "summary": "Investigación de palabras clave. Creación de contenido SEO. Gestión de Google Search Console. Gestión de Ahrefs. Optimización web UX/UI. Diseño e implementación de estrategias de crecimiento."
+  "titles": {
+    "home": "Inicio",
+    "experience": "Experiencia",
+    "portfolio": "Portfolio",
+    "photography": "Fotografías",
+    "video-editing": "Edición de videos",
+    "about": "Sobre Mí",
+    "tools": "Herramientas",
+    "navbar-contact": "Contacto",
+    "title-contact": "Contáctcame"
   },
-  {
-    "name": "Video Editor",
-    "company": "Thrive media",
-    "start-date": "Junio 2024",
-    "end-date": "Octubre 2024",
-    "summary": "Traducción de contenido. Edición de video. Investigación de palabras clave para miniaturas. Edición de sonido."
+  "home": {
+    "greeting": "¡Hola! Soy Samuel Carranza",
+    "role": "Fotógrafo -  Editor de videos"
   },
-  {
-    "name": "Instructoría y coordinación de prácticas profesionales de estudiantes de comunicaciones",
-    "company": "UCA - Universidad Centroamericana José Simeón Cañas",
-    "start-date": "Agosto 2023",
-    "end-date": "Diciembre 2023",
-    "summary": "Instructoría de contenido teórico y práctico en desarrollo de procesos de diagnóstico y comunicación interna. Seguimiento y evaluación de estudiantes desempeñando prácticas profesionales. Acompañamiento y correción de campañas y estrategias propuestas por estudiantes."
+  "experience": [
+    {
+      "name": "Copywriter",
+      "company": "Publisoft",
+      "start-date": "Julio 2024",
+      "end-date": "Actualidad",
+      "summary": "Investigación de palabras clave. Creación de contenido SEO. Gestión de Google Search Console. Gestión de Ahrefs. Optimización web UX/UI. Diseño e implementación de estrategias de crecimiento."
+    },
+    {
+      "name": "Video Editor",
+      "company": "Thrive media",
+      "start-date": "Junio 2024",
+      "end-date": "Octubre 2024",
+      "summary": "Traducción de contenido. Edición de video. Investigación de palabras clave para miniaturas. Edición de sonido."
+    },
+    {
+      "name": "Instructoría y coordinación de prácticas profesionales de estudiantes de comunicaciones",
+      "company": "UCA - Universidad Centroamericana José Simeón Cañas",
+      "start-date": "Agosto 2023",
+      "end-date": "Diciembre 2023",
+      "summary": "Instructoría de contenido teórico y práctico en desarrollo de procesos de diagnóstico y comunicación interna. Seguimiento y evaluación de estudiantes desempeñando prácticas profesionales. Acompañamiento y correción de campañas y estrategias propuestas por estudiantes."
+    },
+    {
+      "name": "Investigación -FONDO UCA 'La situación de la población adulta mayor salvadoreña a inicios de la década del envejecimiento saludable'",
+      "company": "UCA - Universidad Centroamericana José Simeón Cañas",
+      "start-date": "Enero 2022",
+      "end-date": "Octubre 2023",
+      "summary": "Búsqueda y recolección de datos. Redacción de documentos técnicos/científicos. Desarrollo metodológico y construcción de herramientas de recolección de información. Investigación de campo/ recolección de datos. Construcción de artículo científico"
+    }
+  ],
+  "about": {
+    "paragraphs": ["Párrafo", "Párrafo", "Párrafo"],
+    "cv-message": "Para conocer más sobre mi trabajo, te invito a descargar mi Curriculum Vitae.",
+    "download": "Descargar CV",
+    "routCv": "public/cvs/Samuel-Carranza-CV-Esp.pdf",
+    "cvFile": "Samuel-Carranza-CV-Esp.pdf"
+    
   },
-  {
-    "name": "Investigación -FONDO UCA 'La situación de la población adulta mayor salvadoreña a inicios de la década del envejecimiento saludable'",
-    "company": "UCA - Universidad Centroamericana José Simeón Cañas",
-    "start-date": "Enero 2022",
-    "end-date": "Octubre 2023",
-    "summary": "Búsqueda y recolección de datos. Redacción de documentos técnicos/científicos. Desarrollo metodológico y construcción de herramientas de recolección de información. Investigación de campo/ recolección de datos. Construcción de artículo científico"
+  "contact-form": {
+    "full-name": "Nombre y Apellido",
+    "email": "Correo electrónico",
+    "message": "Mensaje",
+    "name-placeholder": "Ingresa tu nombre y apellido",
+    "email-placeholder": "Ingresa tu email",
+    "message-placeholder": "Ingresa tu mensaje aqui",
+    "submit": "Enviar",
+    "errorName": "El campo es obligatorio y solo se aceptan letras.",
+    "errorEmail": "El campo es obligatorio y debe tener formato valido de correo electrónico.",
+    "errorMsj": "El mensaje es obligatorio y debe tener al menos 10 caracteres."
+  },
+  "modal1":{
+    "title":"¡Envío Exitoso!",
+    "text1":", tu mensaje ha sido enviado correctamente a Samuel Carranza desde el email ",
+    "text2":". Muchas gracias por escribirme. Me pondré en contacto contigo a la brevedad."
+  },
+  "modal2":{
+    "title":"Error en el envío",
+    "text1":", no se pudo enviar tu mensaje a Samuel Carranza desde el email ",
+    "text2":". Por favor, inténtalo nuevamente más tarde o contáctame directamente a través de otro medio. Lamento las molestias."
+  },
+  "footer": {
+    "slogan": "Pasión por cada detalle, perfección en cada frame",
+    "media-contact-message": "Contáctame por redes",
+    "copyright": "@2025 Desarrollado por CodeLens"
   }
-],
-"about": {
-  "paragraphs":[
-  "Párrafo",
-  "Párrafo",
-  "Párrafo"
-],
-"cv-message": "Lorem ipsum",
-"download": "Descargar CV"
-},
-"contact-form": {
-  "full-name": "Nombre y Apellido",
-  "email": "Correo electrónico",
-  "message": "Mensaje",
-  "message-placeholder": "Deja tu mensaje aquí",
-  "submit": "Enviar"
-},
-"footer": {
-  "slogan": "Pasión por cada detalle, perfección en cada frame",
-  "media-contact-message": "Contáctame por redes",
-  "copyright": "@2025 Desarrollado por CodeLens"
-}
 }
