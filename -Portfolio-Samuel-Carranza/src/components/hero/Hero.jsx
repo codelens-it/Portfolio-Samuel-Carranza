@@ -1,18 +1,21 @@
 import React from "react"
+import { useTranslation, Trans } from 'react-i18next'
 import "./hero.css"
 
 const Hero = () => {
-  
+  const { t } = useTranslation();
+
   return(
     <section id="hero" className="overlay">
       <div className="hero-text">
         <div>
-          <span>Hola! Soy Samuel Carranza</span><span className="camera-icon">📷</span>
+          <span>{t('home.greeting')}</span><span className="camera-icon">📷</span>
         </div>
         <h1>
-          Fotógrafo 
-          <br/> 
-          Editor de videos
+          <Trans
+          i18nKey={'home.role'}
+          defaults="Fotógrafo <br/> Editor de videos"
+          />
         </h1>
       </div>
       <div className="hero-media">

@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import "./slider.css";
 import PropTypes from "prop-types";
+import { useTranslation } from 'react-i18next';
 
 const Slider = ({ imgs }) => {
+  const { t } = useTranslation();
   const [currentImg, setCurrentImg] = useState(0);
   const quantity = imgs?.length;
 
@@ -26,31 +28,36 @@ const Slider = ({ imgs }) => {
   if (!Array.isArray(imgs) || quantity === 0) return null; // No renderizar si no hay imágenes
 
   return (
-    <div className="slider-container">
-      <button className="btn-slider btn-left" onClick={prevImg}>
-        <img src="/icons/arrow-left-icon.svg" alt="Previous" />
-      </button>
+    <div className="photography-container">
+      <h3>{t("titles.featured")}</h3>
 
-      <div className="slider-wrapper">
-        {imgs.map((img, i) => {
-          const src = `/public/polaroids-prueba/${img}.webp`;
-          return (
-            <div
-              className={`slide ${currentImg === i ? "active" : ""}`}
-              key={img}
-              style={{
-                transform: `translateX(-${currentImg * 100}%)`, // Desplaza el contenedor para mostrar solo la imagen activa
-              }}
-            >
-              <img src={src} alt={`Imagen ${i + 1}`} />
-            </div>
-          );
-        })}
+      <div className="slider-container">
+
+        <button className="btn-slider btn-left" onClick={prevImg}>
+          <img src="/icons/arrow-left-icon.svg" alt="Previous" />
+        </button>
+
+        <div className="slider-wrapper">
+          {imgs.map((img, i) => {
+            const src = `/public/polaroids-prueba/${img}.webp`;
+            return (
+              <div
+                className={`slide ${currentImg === i ? "active" : ""}`}
+                key={img}
+                style={{
+                  transform: `translateX(-${currentImg * 100}%)`, // Desplaza el contenedor para mostrar solo la imagen activa
+                }}
+              >
+                <img src={src} alt={`Imagen ${i + 1}`} />
+              </div>
+            );
+          })}
+        </div>
+
+        <button className="btn-slider btn-right" onClick={nextImg}>
+          <img src="/icons/arrow-right-icon.svg" alt="Next" />
+        </button>
       </div>
-
-      <button className="btn-slider btn-right" onClick={nextImg}>
-        <img src="/icons/arrow-right-icon.svg" alt="Next" />
-      </button>
     </div>
   );
 };

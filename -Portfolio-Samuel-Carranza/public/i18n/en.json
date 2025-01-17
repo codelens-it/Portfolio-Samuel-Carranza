@@ -3,8 +3,8 @@
     "home": "Home",
     "experience": "Work Experience",
     "portfolio": "Portfolio",
-    "photography": "Photography",
-    "video-editing": "Video Editing",
+    "featured": "Featured",
+    "gallery": "Gallery",
     "about": "About Me",
     "tools": "Tools",
     "navbar-contact": "Contact",
@@ -12,7 +12,7 @@
   },
   "home": {
     "greeting": "¡Hi there! My name is Samuel Carranza",
-    "role": "Photographer - Video editor"
+    "role": "Photographer <br/> Video editor"
   },
   "experience": [
     {

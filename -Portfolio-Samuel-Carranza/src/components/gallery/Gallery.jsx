@@ -1,10 +1,12 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import './gallery.css'
 import '../portfolio/portfolio.css'
 import imageData from '../../data/images'
 
 const Gallery = () => {
-  const [fullWidth, SetFullWidth] = useState(null),
+  const { t } = useTranslation(),
+    [fullWidth, SetFullWidth] = useState(null),
     [loaded, setLoaded] = useState(false);
 
 
@@ -12,7 +14,7 @@ const Gallery = () => {
 
   return (
     <>
-      <h3>Gallery</h3>
+      <h3>{t('titles.gallery')}</h3>
       <div className="masonry">
         {
           imageData.map((img, i) => {
@@ -20,7 +22,7 @@ const Gallery = () => {
             return (
               <div id={i} key={i} className={`item ${fullWidth === i ? 'item-fw' : ''} ${loaded ? '' : 'loading'}`}>
                     <img src={src}
-                      alt='imagen'
+                      alt={`imagen ${i}`}
                       loading='lazy'
                       className={`item-photo ${loaded ? '' : 'hidden'}${fullWidth === i ? 'photo-fw' : ''}`}
                       onClick={() => { SetFullWidth(i) }}

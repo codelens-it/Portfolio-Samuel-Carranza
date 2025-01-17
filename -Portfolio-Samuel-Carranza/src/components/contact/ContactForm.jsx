@@ -213,7 +213,7 @@ const ContactForm = () => {
             )}
           </Form.Group>
           <Button type="submit" variant="primary" className="contact-button">
-            Enviar
+            {t('contact-form.submit')}
           </Button>
           {modalIsOpen && (
             <Modal

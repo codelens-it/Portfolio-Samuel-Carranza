@@ -3,8 +3,8 @@
     "home": "Inicio",
     "experience": "Experiencia",
     "portfolio": "Portfolio",
-    "photography": "Fotografías",
-    "video-editing": "Edición de videos",
+    "featured": "Destacadas",
+    "gallery": "Galería",
     "about": "Sobre Mí",
     "tools": "Herramientas",
     "navbar-contact": "Contacto",
@@ -12,7 +12,7 @@
   },
   "home": {
     "greeting": "¡Hola! Soy Samuel Carranza",
-    "role": "Fotógrafo -  Editor de videos"
+    "role": "Fotógrafo <br/> Editor de videos"
   },
   "experience": [
     {

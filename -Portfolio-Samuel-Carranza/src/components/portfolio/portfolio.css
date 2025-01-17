@@ -1,23 +1,35 @@
+.portfolio-header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
 h2.title-portfolio {
   display: block;
   position: relative;
   text-align: center;
   color: var(--white);
-  font-size: 3rem;
+  font-size: clamp(2rem, 7vw, 3rem);;
 }
 
 h2.title-portfolio::after{
   content: "";
   position: absolute;
-  bottom: 0; /* Coloca la línea justo debajo del texto */
-  left: 50px;
-  width: 150px; 
-  transform: translateX(-30%);/* Haz que la línea ocupe todo el ancho del texto */
-  height: 2px; /* Grosor de la línea */
+  bottom: -8px; 
+  left: 0;
+  width: 70%; 
+  height: 2px;
   background-color: var(--darkred);
 }
 
 .title-container-portfolio{
-  width: 100%;
+  width: auto;
   height: auto;
+}
+
+h3 {
+  font-size: 2rem;
+  margin-bottom: 15px;
 }
