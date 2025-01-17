@@ -24,9 +24,6 @@ function App() {
         <Portfolio/>
       </Section>
       <Section>
-        <Sliders/>
-      </Section>
-      <Section>
         <AboutMe />
       </Section>
       <Section>
