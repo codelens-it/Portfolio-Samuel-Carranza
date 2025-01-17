@@ -5,10 +5,7 @@ import PropTypes from "prop-types";
 
 
 const Modal = ({text, title, onClose, onCloseModal}) => {
-//   const [isOpen, setIsOpen] = useState(true);
-//   // const openModal = () => setIsOpen(false);
-//   const closeModal = () => setIsOpen(false);
-// // "modal is-open"
+
   return (
     <div className={onClose?("modal is-open"):("modal")} >
       <div className="modal-conteiner">

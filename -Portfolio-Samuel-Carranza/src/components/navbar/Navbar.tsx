@@ -34,15 +34,15 @@ const Navbar = () => {
           aria-controls="menu">
         </button>
       <div className={`menu ${menuOpen ? 'visible' : ''}`}>
-        <a href="#inicio" className="navbar-logo">
+        <a href="#hero" className="navbar-logo">
           <img src="/Logo-completo.svg" alt="Logo Samuel Carranza" />
         </a>
         <nav>
-            <a href="#inicio">{t('titles.home')}</a>
-            <a href="#sobre-mi">{t('titles.about')}</a>
-            <a href="#experiencia">{t('titles.experience')}</a>
+            <a href="#hero">{t('titles.home')}</a>
+            <a href="#about">{t('titles.about')}</a>
+            <a href="#experience">{t('titles.experience')}</a>
             <a href="#portfolio">{t('titles.portfolio')}</a>
-            <a href="#contacto">{t('titles.navbar-contact')}</a>
+            <a href="#contact">{t('titles.navbar-contact')}</a>
             <div className="navbar-language" onClick={handleLanguageToggle}>
               <picture className='icon-language-container'>
                 <img className='icon-language'  src="/icons/icon-language.svg" alt="icono de mundo" />

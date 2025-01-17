@@ -6,7 +6,7 @@ const Portfolio = () => {
 
 return(
 <>
-  <div className="title-container-portfolio">
+  <div id='portfolio' className="title-container-portfolio">
     <h2 className='title-portfolio'>Portfolio</h2>
   </div>
   <Photography/>

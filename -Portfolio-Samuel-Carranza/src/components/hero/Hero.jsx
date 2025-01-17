@@ -6,7 +6,9 @@ const Hero = () => {
   return(
     <section id="hero" className="overlay">
       <div className="hero-text">
-        <span>Hola! Soy Samuel Carranza</span>
+        <div>
+          <span>Hola! Soy Samuel Carranza</span><span className="camera-icon">📷</span>
+        </div>
         <h1>
           Fotógrafo 
           <br/> 

@@ -35,7 +35,7 @@
       "start-date": "August 2023",
       "end-date": "December 2023",
       "summary": "Teaching theoretical and practical content in internal communication processes. Monitoring and evaluating student internships. Supporting and reviewing student campaigns and strategies."
-    },  
+    },
     {
       "name": "Research - UCA FUND Project",
       "company": "UCA - Universidad Centroamericana José Simeón Cañas",
@@ -45,20 +45,38 @@
     }
   ],
   "about": {
-    "paragraphs":[
-    "I am a Social Communication graduate specializing in audiovisual and photography, with expertise in production, scripting and project implementation. I also possess skills in planning and managing internal and corporate communication processes.",
-    "Párrafo",
-    "Párrafo"
-  ],
-  "cv-message": "Lorem ipsum",
-  "download": "Download Resume"
+    "paragraphs": [
+      "I am a Social Communication graduate specializing in audiovisual and photography, with expertise in production, scripting and project implementation. I also possess skills in planning and managing internal and corporate communication processes.",
+      "Párrafo",
+      "Párrafo"
+    ],
+    "cv-message": "To learn more about my work, I invite you to download my Curriculum.",
+    "download": "Download Resume",
+    "routCv": "public/cvs/Samuel-Carranza-CV-Eng.pdf",
+    "cvFile": "Samuel-Carranza-CV-Eng.pdf"
   },
   "contact-form": {
     "full-name": "Full name",
     "email": "Email",
     "message": "Message",
+    "name-placeholder": "Enter your full name",
+    "email-placeholder": "Enter your email",
     "message-placeholder": "Leave your message here",
-    "submit": "Submit"
+    "submit": "Submit",
+    "errorName": "The field is required and only letters are accepted.",
+    "errorEmail": "The field is required and must have a valid email format.",
+    "errorMsj": "The message is required and must be at least 10 characters long."
+  },
+  "modal1": {
+    "title": "Successful Submission!",
+    "text1": ", your message has been successfully sent to Samuel Carranza from the email ",
+    "text2": ". Thank you very much for reaching out. I will get back to you as soon as possible."
+  
+  },
+  "modal2": {
+    "title": "Submission Error",
+    "text1": ", your message could not be sent to Samuel Carranza from the email ",
+    "text2": ". Please try again later or contact me directly through another channel. I apologize for the inconvenience."
   },
   "footer": {
     "slogan": "Passion for every detail, perfection in every frame.",
