@@ -6,9 +6,11 @@ const Portfolio = () => {
 
 return(
 <>
-  <div id='portfolio' className="title-container-portfolio">
+<div className='portfolio-header'>
+<div id='portfolio' className="title-container-portfolio">
     <h2 className='title-portfolio'>Portfolio</h2>
   </div>
+</div>
   <Sliders/>
   <Gallery/>
 </>
