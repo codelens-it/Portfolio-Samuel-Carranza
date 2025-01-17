@@ -12,7 +12,7 @@
   },
   "home": {
     "greeting": "¡Hi there! My name is Samuel Carranza",
-    "role": "Photographer - Video editor"
+    "role": "Photographer <br/> Video editor"
   },
   "experience": [
     {
