@@ -3,6 +3,14 @@
   gap: 10px;
 }
 
+.loading {
+  width: 100%;
+  padding-top: 75%;
+  aspect-ratio:  4/3 auto;
+  background-color: var(--darkslategray);
+  background-size: cover;
+}
+
 .item  {
   width: 100%;
   height: auto;
@@ -32,6 +40,10 @@
 
 .invisible {
   display: none;
+}
+
+.hidden {
+  display: hidden;
 }
 
 /*Propiedades full width*/
