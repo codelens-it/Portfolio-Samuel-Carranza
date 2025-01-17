@@ -1,4 +1,4 @@
-import Photography from '../photography/Photography'
+import Sliders from '../slider/Sliders'
 import Gallery from '../gallery/Gallery'
 import './portfolio.css'
 
@@ -9,7 +9,7 @@ return(
   <div id='portfolio' className="title-container-portfolio">
     <h2 className='title-portfolio'>Portfolio</h2>
   </div>
-  <Photography/>
+  <Sliders/>
   <Gallery/>
 </>
 
