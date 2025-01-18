@@ -11,10 +11,10 @@ const ContactForm = () => {
   const messageRef = useRef(null);
   const { t, i18n } = useTranslation(); // Hook para traducción
 
-  const Modal1Text1 = t("modal1.text1") 
-  const Modal1Text2 = t("modal1.text2") 
-  const Modal2Text1 = t("modal2.text1") 
-  const Modal2Text2 = t("modal2.text2") 
+  const modalSuccessfulText1 = t("modalSuccessful.text1") 
+  const modalSuccessfulText2 = t("modalSuccessful.text2") 
+  const modalErrorText1 = t("modalError.text1") 
+  const modalErrorText2 = t("modalError.text2") 
 
 
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -136,14 +136,14 @@ const ContactForm = () => {
       setModalIsOpen(true);
       setMsjApi({
         title: t("modal1.title"),
-        text: `${name}${Modal1Text1}${email}${Modal1Text2}`,
+        text: `${name}${modalSuccessfulText1}${email}${modalSuccessfulText2}`,
       });
     } else {
       //!modal de error
       setModalIsOpen(true);
       setMsjApi({
         title: t("modal2.title"),
-        text: `${name}${Modal2Text1}${email}${Modal2Text2}`,
+        text: `${name}${modalErrorText1}${email}${modalErrorText2}`,
       });
       console.log("Error", data);
       setResult(data.message);
