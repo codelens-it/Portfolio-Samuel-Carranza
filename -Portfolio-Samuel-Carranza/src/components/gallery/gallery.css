@@ -30,7 +30,7 @@
   height: 50px;
   width: 50px;
   position: absolute;
-  top: 10px;
+  top: 20px;
   right: 10px;
   z-index: 10000;
   border: none;
@@ -57,19 +57,14 @@
   display: flex;
   justify-content: center;
   z-index: 1000000;
-  background-color: rgb(0, 0, 0, 0.8);
+  padding: 20px 10px;
+  background-color: #46434cd6;
 }
+
 
 .photo-fw {
-  width: 80vw;
+  max-width: 70vw;
+  height: auto;
   object-fit: contain;
+  filter: drop-shadow(1px 1px 5px var(--black));
 }
-
-
-/*
-PENDIENTES:
-
-- Animación para trasladar la imagen al medio
-- lazy loading para el coso
-
-*/
