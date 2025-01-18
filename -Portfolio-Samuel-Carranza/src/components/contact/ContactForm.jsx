@@ -135,14 +135,14 @@ const ContactForm = () => {
       //!Modal de exito
       setModalIsOpen(true);
       setMsjApi({
-        title: t("modal1.title"),
+        title: t("modalSuccessful.title"),
         text: `${name}${modalSuccessfulText1}${email}${modalSuccessfulText2}`,
       });
     } else {
       //!modal de error
       setModalIsOpen(true);
       setMsjApi({
-        title: t("modal2.title"),
+        title: t("modalError.title"),
         text: `${name}${modalErrorText1}${email}${modalErrorText2}`,
       });
       console.log("Error", data);
