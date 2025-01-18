@@ -9,9 +9,16 @@ const Gallery = () => {
     [fullWidth, SetFullWidth] = useState(null),
     [loaded, setLoaded] = useState(false);
 
+    const onFullWidth = (index) => {
+      SetFullWidth(index);
+      document.documentElement.style.overflow = 'hidden';
+      return
+    } 
 
-
-
+    const closeFullWidth = () => {
+      SetFullWidth(null)
+      document.documentElement.style.overflow = 'auto';
+    }
   return (
     <>
       <h3>{t('titles.gallery')}</h3>
@@ -25,10 +32,10 @@ const Gallery = () => {
                       alt={`imagen ${i}`}
                       loading='lazy'
                       className={`item-photo ${loaded ? '' : 'hidden'}${fullWidth === i ? 'photo-fw' : ''}`}
-                      onClick={() => { SetFullWidth(i) }}
+                      onClick={() => { onFullWidth(i) }}
                       onLoad={() => { setLoaded(true) }}
                       />
-                    <button onClick={() => { SetFullWidth(null) }} className={`close-image-icon ${fullWidth === i ? '' : 'invisible'}`} />
+                    <button onClick={() => { closeFullWidth() }} className={`close-image-icon ${fullWidth === i ? '' : 'invisible'}`} />
               </div>
             )
           })
