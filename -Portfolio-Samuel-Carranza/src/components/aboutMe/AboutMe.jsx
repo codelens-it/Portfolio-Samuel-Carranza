@@ -12,11 +12,14 @@ const AboutMe = () => {
   const cvSamuelCarranza  = t("about.cvFile");
   
   const tools = [
-    "Adobe",
     "Audition",
+    "Illustrator",
+    "Lightroom",
     "Microsoft Excel",
     "Microsoft Powerpoint",
     "Microsoft Word",
+    "Photoshop",
+    "Premiere",
     "Reaper",
     "Wix",
     "Wordpress",

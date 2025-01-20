@@ -134,11 +134,6 @@
 }
 
 .img-container {
-  width: 50px; /* Tamaño del círculo */
-  height: 50px;
-  border-radius: 50%; /* div circular */
-  overflow: hidden;
-  /* border: 2px solid #000; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -146,8 +141,9 @@
 }
   
 .img {
-  width: 100%;
+  width: 50px;
   height: 100%;
+  margin: 0 20px;
   object-fit: cover; /* Ajusta la imagen para el círculo */
 }
   
@@ -155,6 +151,10 @@
   margin-top: 0.1rem;
   font-size: 1rem;
   color: var(--white);
+  white-space: normal; 
+  display: inline-block;
+  max-width: 100px; 
+  text-align: center;
 }
 
 .img-card:hover {

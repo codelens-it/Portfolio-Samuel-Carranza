@@ -9,9 +9,6 @@ const Gallery = () => {
     [fullWidth, SetFullWidth] = useState(null),
     [loaded, setLoaded] = useState(false);
 
-
-
-
   return (
     <>
       <h3>{t('titles.gallery')}</h3>
