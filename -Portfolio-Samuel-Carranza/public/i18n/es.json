@@ -45,7 +45,10 @@
     }
   ],
   "about": {
-    "paragraphs": ["Párrafo", "Párrafo", "Párrafo"],
+    "paragraphs": [
+    "Soy Samuel Carranza, Licenciado en Comunicación Social, un apasionado a la <strong>producción audiovisual</strong>, <strong>fotografía</strong> y <strong>edición multimedia</strong>. Mi enfoque principal es la <strong>edición de vídeo</strong>, manejo herramientas como Adobe suite (Premier, Illustrator, Photoshop, etc.), Davinci Resolve, Capcut, Canva y Reaper. Mi enfoque a las comunicaciones ha sido traducir conceptos a lenguaje audiovisual que tenga un impacto y resignifique mensajes que se escapan a simple vista. Busco captar a través del ojo del espectador la atención a los detalles y a una imagen global que le permita conectar con narrativas complejas.",
+    "Poseo un fuerte enfoque en <strong>storytelling</strong>, que por medio de una <strong>edición de vídeo</strong> o <strong>fotografía</strong> atractiva y bien pensada convierta al espectador en un elemento activo de las narrativas visuales. También soy un Copywriter, con conocimientos de SEO, enfocados al posicionamiento de contenido.", "¿Tienes algo en mente en que te pueda ayudar? ¡Contáctame!"
+  ],
     "cv-message": "Para conocer más sobre mi trabajo, te invito a descargar mi Curriculum Vitae.",
     "download": "Descargar CV",
     "routCv": "public/cvs/Samuel-Carranza-CV-Esp.pdf",

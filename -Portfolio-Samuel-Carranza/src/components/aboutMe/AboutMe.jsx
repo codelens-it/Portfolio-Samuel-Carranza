@@ -4,7 +4,7 @@ import "./aboutMe.css";
 import { Button } from "react-bootstrap";
 import ItemTool from "./ItemTool";
 import Polaroid from "../polaroid/Polaroid";
-import { useTranslation } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next";
 
 const AboutMe = () => {
   const { t, i18n } = useTranslation(); // Hook para traducción
@@ -35,17 +35,22 @@ const AboutMe = () => {
       <div className="first-container">
         <div className="right-column">
           <Polaroid
-            image="/polaroids-prueba/sobre-mi.webp"
+            image="/images/about/about.webp"
             alt="Samuel Carranza"
             size="large"
           />
         </div>
         <div className="left-column">
-          {t("about.paragraphs", { returnObjects: true }).map(
-            (paragraph, index) => (
-              <p key={index}>{paragraph}</p>
-            )
-          )}
+          {t("about.paragraphs", { returnObjects: true }).map((paragraph, index) => (
+            <p key={index}>
+              <Trans
+                i18nKey={`about.paragraphs.${index}`}
+                components={{
+                  strong: <strong className="highlight" />,
+                }}
+              />
+            </p>
+          ))}
         </div>
       </div>
 
