@@ -68,3 +68,33 @@
   object-fit: contain;
   filter: drop-shadow(1px 1px 5px var(--black));
 }
+
+/*SLIDER*/
+@media (max-width: 768px) {
+  .masonry{ 
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    width: 100%;
+    height: auto;
+    columns: unset;
+  }
+
+  .masonry-container {
+    max-height: 500px;
+    width: 100%;
+  }
+
+  .item {
+    flex-shrink: 0;
+    height: 100%;
+  }
+
+  .gallery-slider-btn{
+    position: absolute;
+    left: 0;
+    right: 0;
+    fill: white;
+  }
+}
