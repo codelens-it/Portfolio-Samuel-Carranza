@@ -30,12 +30,16 @@
   height: 50px;
   width: 50px;
   position: absolute;
-  top: 10px;
+  top: 20px;
   right: 10px;
   z-index: 10000;
   border: none;
   background-image: url('/icons/close.svg');
   background-repeat: no-repeat;
+}
+
+.gallery-slider-btn {
+  display: none;
 }
 
 .invisible {
@@ -57,19 +61,43 @@
   display: flex;
   justify-content: center;
   z-index: 1000000;
-  background-color: rgb(0, 0, 0, 0.8);
+  padding: 20px 10px;
+  background-color: #46434cd6;
 }
+
 
 .photo-fw {
-  width: 80vw;
+  max-width: 70vw;
+  height: auto;
   object-fit: contain;
+  filter: drop-shadow(1px 1px 5px var(--black));
 }
 
+/*SLIDER*/
+@media (max-width: 768px) {
+  .masonry{ 
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    width: 100%;
+    height: auto;
+    columns: unset;
+  }
 
-/*
-PENDIENTES:
+  .masonry-container {
+    max-height: 500px;
+    width: 100%;
+  }
 
-- Animación para trasladar la imagen al medio
-- lazy loading para el coso
+  .item {
+    flex-shrink: 0;
+    height: 100%;
+  }
 
-*/
+  .gallery-slider-btn{
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+}

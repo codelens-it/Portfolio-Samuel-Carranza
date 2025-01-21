@@ -67,12 +67,12 @@
     "errorEmail": "El campo es obligatorio y debe tener formato valido de correo electrónico.",
     "errorMsj": "El mensaje es obligatorio y debe tener al menos 10 caracteres."
   },
-  "modal1":{
+  "modalSuccessful":{
     "title":"¡Envío Exitoso!",
     "text1":", tu mensaje ha sido enviado correctamente a Samuel Carranza desde el email ",
     "text2":". Muchas gracias por escribirme. Me pondré en contacto contigo a la brevedad."
   },
-  "modal2":{
+  "modalError":{
     "title":"Error en el envío",
     "text1":", no se pudo enviar tu mensaje a Samuel Carranza desde el email ",
     "text2":". Por favor, inténtalo nuevamente más tarde o contáctame directamente a través de otro medio. Lamento las molestias."
