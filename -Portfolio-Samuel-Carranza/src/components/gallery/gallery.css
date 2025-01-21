@@ -38,6 +38,10 @@
   background-repeat: no-repeat;
 }
 
+.gallery-slider-btn {
+  display: none;
+}
+
 .invisible {
   display: none;
 }
@@ -95,6 +99,5 @@
     position: absolute;
     left: 0;
     right: 0;
-    fill: white;
   }
 }
