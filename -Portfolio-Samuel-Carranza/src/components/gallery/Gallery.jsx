@@ -33,7 +33,12 @@ const Gallery = () => {
                         alt={`imagen ${i}`}
                         loading='lazy'
                         className={`item-photo ${loaded ? '' : 'hidden'}${fullWidth === i ? 'photo-fw' : ''}`}
-                        onClick={() => { onFullWidth(i) }}
+                        onClick={() => { 
+                          const isTabletSize = window.matchMedia("(max-width: 768px)").matches
+                          if(isTabletSize) return
+                          onFullWidth(i)
+                          return
+                        }}
                         onLoad={() => { setLoaded(true) }}
                         />
                       <button onClick={() => { closeFullWidth() }} className={`close-image-icon ${fullWidth === i ? '' : 'invisible'}`} />
