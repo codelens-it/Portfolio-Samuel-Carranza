@@ -17,7 +17,6 @@
   margin-bottom: 5px;
   border-radius: 5px;
   border: 0.1em solid var(--darkslategray);
-  position: relative;
 }
 
 .item-photo {
@@ -76,28 +75,53 @@
 /*SLIDER*/
 @media (max-width: 768px) {
   .masonry{ 
-    position: relative;
     display: flex;
     flex-wrap: nowrap;
-    overflow-x: hidden;
+    overflow: hidden;
     width: 100%;
-    height: auto;
+    height: 100%;
     columns: unset;
+    gap: 0;
   }
 
   .masonry-container {
-    max-height: 500px;
+    height: 500px;
     width: 100%;
+    position: relative;
+    padding: 20px;
   }
 
   .item {
     flex-shrink: 0;
+    flex-grow: 0;
     height: 100%;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    border: none;
+    transition: transform 300ms ease-in-out;
+  }
+
+  .item-photo {
+    object-fit: contain;
   }
 
   .gallery-slider-btn{
+    display: block;
+    width: auto;
+    height: 100%;
+    padding: 15px;
     position: absolute;
-    left: 0;
-    right: 0;
+    top: 0;
   }
+}
+
+
+
+.next-btn {
+  right: 0;
+}
+
+.prev-btn {
+  left: 0;
 }
