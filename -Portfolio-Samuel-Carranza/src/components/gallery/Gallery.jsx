@@ -11,6 +11,7 @@ const Gallery = () => {
     [imgIndex, setImgIndex] = useState(0),
     [isTabletSize, setIsTabletSize] = useState(false);
 
+    // Actualiza el boolean que comprueba si el tamaño de la pantalla es menor a 768px
     useEffect(() => {
       window.addEventListener('resize', () => {
         const isTablet = window.matchMedia("(max-width: 768px)").matches

@@ -99,6 +99,7 @@
     display: flex;
     justify-content: center;
     border: none;
+    transition: transform 300ms ease-in-out;
   }
 
   .item-photo {
@@ -115,6 +116,8 @@
   }
 }
 
+
+
 .next-btn {
   right: 0;
 }
@@ -122,4 +125,3 @@
 .prev-btn {
   left: 0;
 }
-
