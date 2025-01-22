@@ -17,7 +17,6 @@
   margin-bottom: 5px;
   border-radius: 5px;
   border: 0.1em solid var(--darkslategray);
-  position: relative;
 }
 
 .item-photo {
@@ -79,10 +78,10 @@
     display: flex;
     flex-wrap: nowrap;
     overflow: hidden;
-    justify-content: center;
     width: 100%;
     height: 100%;
     columns: unset;
+    gap: 0;
   }
 
   .masonry-container {
@@ -108,11 +107,11 @@
 
   .gallery-slider-btn{
     display: block;
-    position: absolute;
-    top: 50%;
     width: auto;
-    height: auto;
-    padding: 10px;
+    height: 100%;
+    padding: 15px;
+    position: absolute;
+    top: 0;
   }
 }
 
@@ -124,7 +123,3 @@
   left: 0;
 }
 
-/*
-- Desactivar full width cuando está el slider puesto
-
-*/
