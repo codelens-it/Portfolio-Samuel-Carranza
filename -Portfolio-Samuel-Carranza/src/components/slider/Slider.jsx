@@ -1,10 +1,8 @@
 import { useState, useEffect } from "react";
 import "./slider.css";
 import PropTypes from "prop-types";
-import { useTranslation } from 'react-i18next';
 
 const Slider = ({ imgs }) => {
-  const { t } = useTranslation();
   const [currentImg, setCurrentImg] = useState(0);
   const quantity = imgs?.length;
 
@@ -29,17 +27,14 @@ const Slider = ({ imgs }) => {
 
   return (
     <div className="photography-container">
-      <h3>{t("titles.featured")}</h3>
-
       <div className="slider-container">
-
         <button className="btn-slider btn-left" onClick={prevImg}>
           <img src="/icons/arrow-left-icon.svg" alt="Previous" />
         </button>
 
         <div className="slider-wrapper">
           {imgs.map((img, i) => {
-            const src = `/public/polaroids-prueba/${img}.webp`;
+            const src = `/images/slider/${img}.webp`;
             return (
               <div
                 className={`slide ${currentImg === i ? "active" : ""}`}

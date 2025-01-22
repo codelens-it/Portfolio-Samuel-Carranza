@@ -7,7 +7,6 @@ import Footer from './components/footer/Footer'
 import Section from './components/section/Section'
 import Experience from './components/experience/Experience'
 import Portfolio from './components/portfolio/Portfolio'
-import Sliders from './components/slider/Sliders'
 
 
 
@@ -15,18 +14,18 @@ function App() {
 
   return (
    <>
-      <Navbar/>
-      <Hero/>
-      <Section>
+      <Navbar />
+      <Hero />
+      <Section id={'experience'}>
         <Experience />
       </Section>
-      <Section>
+      <Section id={'portfolio'}>
         <Portfolio/>
       </Section>
-      <Section>
+      <Section id={'about-me'}>
         <AboutMe />
       </Section>
-      <Section>
+      <Section id={'contact'}>
         <Contact />
       </Section>
       <Footer />

@@ -39,7 +39,7 @@ const Navbar = () => {
         </a>
         <nav>
             <a href="#hero">{t('titles.home')}</a>
-            <a href="#about">{t('titles.about')}</a>
+            <a href="#about-me">{t('titles.about')}</a>
             <a href="#experience">{t('titles.experience')}</a>
             <a href="#portfolio">{t('titles.portfolio')}</a>
             <a href="#contact">{t('titles.navbar-contact')}</a>

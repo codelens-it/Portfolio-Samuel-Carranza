@@ -4,6 +4,7 @@
   display: flex;
   justify-content: center;
   padding: 20px 0;
+  margin-top: 70px;
 }
 
 h2.title-portfolio {
@@ -12,6 +13,7 @@ h2.title-portfolio {
   text-align: center;
   color: var(--white);
   font-size: clamp(2rem, 7vw, 3rem);;
+  margin-bottom: 40px;
 }
 
 h2.title-portfolio::after{

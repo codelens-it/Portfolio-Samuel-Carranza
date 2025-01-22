@@ -4,7 +4,7 @@ import "./aboutMe.css";
 import { Button } from "react-bootstrap";
 import ItemTool from "./ItemTool";
 import Polaroid from "../polaroid/Polaroid";
-import { useTranslation } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next";
 
 const AboutMe = () => {
   const { t, i18n } = useTranslation(); // Hook para traducción
@@ -12,18 +12,21 @@ const AboutMe = () => {
   const cvSamuelCarranza  = t("about.cvFile");
   
   const tools = [
-    "Adobe",
     "Audition",
+    "Illustrator",
+    "Lightroom",
     "Microsoft Excel",
     "Microsoft Powerpoint",
     "Microsoft Word",
+    "Photoshop",
+    "Premiere",
     "Reaper",
     "Wix",
     "Wordpress",
   ];
 
   return (
-    <div id="about" className="about-me-conatiner">
+    <div className="about-me-conatiner">
       <div className="title-container">
         {/* <h2><span className='underline'>Sobre</span> Mí</h2> */}
         <h2 className="title-about-me">{t("titles.about")}</h2>
@@ -32,17 +35,22 @@ const AboutMe = () => {
       <div className="first-container">
         <div className="right-column">
           <Polaroid
-            image="/polaroids-prueba/sobre-mi.webp"
+            image="/images/about/about.webp"
             alt="Samuel Carranza"
             size="large"
           />
         </div>
         <div className="left-column">
-          {t("about.paragraphs", { returnObjects: true }).map(
-            (paragraph, index) => (
-              <p key={index}>{paragraph}</p>
-            )
-          )}
+          {t("about.paragraphs", { returnObjects: true }).map((paragraph, index) => (
+            <p key={index}>
+              <Trans
+                i18nKey={`about.paragraphs.${index}`}
+                components={{
+                  strong: <strong className="highlight" />,
+                }}
+              />
+            </p>
+          ))}
         </div>
       </div>
 

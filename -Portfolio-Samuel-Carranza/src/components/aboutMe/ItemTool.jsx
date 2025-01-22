@@ -7,7 +7,7 @@ const ItemTool = ({ img, title }) => {
       <div className='img-container'>
         <img src={"public/iconTools/"+img+".svg"} alt={title} className="img" />
       </div>
-      <h3 className="img-title">{title}</h3>
+      <span className="img-title">{title}</span>
     </div>
   )
 }
