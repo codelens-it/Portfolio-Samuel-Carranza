@@ -20,28 +20,42 @@
       "company": "Publisoft",
       "start-date": "July 2024",
       "end-date": "As of today",
-      "summary": "Research of Key words. SEO content creator. Google Search console management. Ahrefs management. Web optimization UX/UI. Desing and implementation of growing strategies."
+      "summary": "Research of Key words. SEO content creator. Google Search console management. Ahrefs management. Web optimization UX/UI. Desing and implementation of growing strategies.",
+      "links": [
+        { "label": "Fissure Maison Article - Transport Beaudet", "url": "https://www.transportrbeaudet.ca/fissure-maison/" },
+        { "label": "Drain Français Article - Transport Beaudet", "url": "https://www.transportrbeaudet.ca/drain-francais/" },
+        { "label": "Ocre Ferreux Article - Transport Beaudet", "url": "https://www.transportrbeaudet.ca/ocre-ferreux/" },
+        { "label": "Entretien L'Ocre Ferreux Article - Transport Beaudet", "url": "https://www.transportrbeaudet.ca/entretien-locre-ferreux/" },
+        { "label": "Website Optimization - Claudel Esthetique", "url": "https://claudelesthetique.com/traitement-hydrafacial" },
+        { "label": "Website Optimization - Claudel Esthetique", "url": "https://claudelesthetique.com/soins-du-corps" },
+        { "label": "Content Writing for Website Redesign - Équipements Boulangerie", "url": "https://www.equipements-boulangerie.com/" },
+        { "label": "Content Writing - Magik Loans", "url": "https://magikloans.com/pret-personnel/" },
+        { "label": "Content Writing - Magik Loans", "url": "https://magikloans.com/remboursement-pour-un-pret/" }
+      ]
     },
     {
       "name": "Video Editor",
       "company": "Thrive media",
       "start-date": "June 2024",
       "end-date": "October 2024",
-      "summary": "Translation of content. Script copywriting. Video editing. Research of Keywords for thumbnails. Sound editing."
+      "summary": "Translation of content. Script copywriting. Video editing. Research of Keywords for thumbnails. Sound editing.",
+      "links": []
     },
     {
       "name": "Teaching Assistant and Professional Practice Coordinator",
       "company": "UCA - Universidad Centroamericana José Simeón Cañas",
       "start-date": "August 2023",
       "end-date": "December 2023",
-      "summary": "Teaching theoretical and practical content in internal communication processes. Monitoring and evaluating student internships. Supporting and reviewing student campaigns and strategies."
-    },
+      "summary": "Teaching theoretical and practical content in internal communication processes. Monitoring and evaluating student internships. Supporting and reviewing student campaigns and strategies.",
+      "links": []    
+  },
     {
       "name": "Research - UCA FUND Project",
       "company": "UCA - Universidad Centroamericana José Simeón Cañas",
       "start-date": "January 2022",
       "end-date": "October 2023",
-      "summary": "Data collection and analysis. Technical/scientific document writing. Methodological development. Field research. Scientific article writing."
+      "summary": "Data collection and analysis. Technical/scientific document writing. Methodological development. Field research. Scientific article writing.",
+      "links": []
     }
   ],
   "about": {

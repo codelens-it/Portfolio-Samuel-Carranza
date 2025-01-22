@@ -12,11 +12,11 @@
 
 .polaroid-container.small {
   width: 200px;
-  height: 250px;
+  height: 300px;
 }
 
 .polaroid-container.small .polaroid-image {
-  height: 180px;
+  height: 200px;
 }
 
 .polaroid-container.large {
@@ -31,6 +31,15 @@
 
 
 @media(min-width: 768px){
+
+  .polaroid-container.small {
+    width: 250px;
+    height: 280px;
+  }
+  
+  .polaroid-container.small .polaroid-image {
+    height: 200px;
+  }
 
     .polaroid-container.large {
         width: 300px;

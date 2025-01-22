@@ -112,6 +112,28 @@
     margin: 0;
 }
 
+.timeline-links {
+    margin-top: 5px;
+  }
+  
+  .timeline-links ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    list-style: none;
+  }
+  
+  .timeline-links a {
+    color: #46434C;
+    font-size: 0.95rem;
+    text-decoration: none;
+  }
+  
+  .timeline-links a:hover {
+    text-decoration: underline;
+  }
+
 .polaroid-container-experience{
     display: flex;
     align-items: center;
@@ -187,7 +209,7 @@
     @media(min-width: 768px){
 
         .polaroid-container-experience{
-            margin-top: 100PX;
+            margin-top: 100px;
             justify-content: flex-start;
             padding-right: 70px;
         }   

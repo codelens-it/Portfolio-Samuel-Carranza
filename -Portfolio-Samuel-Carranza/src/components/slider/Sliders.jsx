@@ -2,7 +2,7 @@ import Slider from "./Slider";
 import { useTranslation } from 'react-i18next';
 
 const Sliders = () => {
-  const imgsSlider = ["polaroid1", "polaroid2", "polaroid3"];
+  const imgsSlider = ["image1", "image2", "image3", "image4", "image5", "image6"];
   const { t } = useTranslation();
   return (
     <div className="slider-section">

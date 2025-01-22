@@ -19,7 +19,7 @@ const Footer = () => {
              <a href="https://www.instagram.com/femt_10?igsh=MWxteGdiZnd2amkzaw==" target="_blank" aria-label="Twitter">
             <img className="icon-instagram" src="/icons/instagram.svg" alt="Instagram" />
             </a>
-            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/samuel-carranza-754c25/" target="_blank" aria-label="LinkedIn">
             <img className="icon-linkedin" src="/icons/linkedin.svg" alt="LinkedIn" />
             </a>
           </div>

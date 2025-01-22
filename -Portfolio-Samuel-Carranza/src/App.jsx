@@ -14,18 +14,18 @@ function App() {
 
   return (
    <>
-      <Navbar/>
-      <Hero/>
-      <Section>
+      <Navbar />
+      <Hero />
+      <Section id={'experience'}>
         <Experience />
       </Section>
-      <Section>
+      <Section id={'portfolio'}>
         <Portfolio/>
       </Section>
-      <Section>
+      <Section id={'about-me'}>
         <AboutMe />
       </Section>
-      <Section>
+      <Section id={'contact'}>
         <Contact />
       </Section>
       <Footer />

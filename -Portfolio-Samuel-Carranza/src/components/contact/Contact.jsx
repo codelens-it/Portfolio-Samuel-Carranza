@@ -9,7 +9,7 @@ const Contact = () => {
 
   return (
     <>
-      <div id='contact' className="contact-container">
+      <div className="contact-container">
         <div className='title-container-contact'>
           <h2 className='title-contact'>{t("titles.title-contact")}</h2>
         </div>

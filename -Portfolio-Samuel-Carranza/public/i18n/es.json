@@ -20,28 +20,42 @@
       "company": "Publisoft",
       "start-date": "Julio 2024",
       "end-date": "Actualidad",
-      "summary": "Investigación de palabras clave. Creación de contenido SEO. Gestión de Google Search Console. Gestión de Ahrefs. Optimización web UX/UI. Diseño e implementación de estrategias de crecimiento."
+      "summary": "Investigación de palabras clave. Creación de contenido SEO. Gestión de Google Search Console. Gestión de Ahrefs. Optimización web UX/UI. Diseño e implementación de estrategias de crecimiento.",
+      "links": [
+        { "label": "Artículo Fissure Maison - Transport beaudet", "url": "https://www.transportrbeaudet.ca/fissure-maison/" },
+        { "label": "Artículo Drain Français -Transport beaudet", "url": "https://www.transportrbeaudet.ca/drain-francais/" },
+        { "label": "Artículo Ocre Ferreux - Transport beaudet", "url": "https://www.transportrbeaudet.ca/ocre-ferreux/" },
+        { "label": "Artículo Entretien L'Ocre Ferreux - Transport beaudet", "url": "https://www.transportrbeaudet.ca/entretien-locre-ferreux/" },
+        { "label": "Optimización de Sitio web - Claudel Esthetique", "url": "https://claudelesthetique.com/traitement-hydrafacial" },
+        { "label": "Optimización de Sitio web - Claudel Esthetique", "url": "https://claudelesthetique.com/soins-du-corps " },
+        { "label": "Redacción en rediseño de sitio web - Équipements Boulangerie", "url": "https://www.equipements-boulangerie.com/" },
+        { "label": "Redacción de contenidos - Magik loans", "url": "https://magikloans.com/pret-personnel/ " },
+        { "label": "Redacción de contenidos - Magik loans", "url": "https://magikloans.com/remboursement-pour-un-pret/" }
+      ]
     },
     {
       "name": "Video Editor",
       "company": "Thrive media",
       "start-date": "Junio 2024",
       "end-date": "Octubre 2024",
-      "summary": "Traducción de contenido. Edición de video. Investigación de palabras clave para miniaturas. Edición de sonido."
+      "summary": "Traducción de contenido. Edición de video. Investigación de palabras clave para miniaturas. Edición de sonido.",
+      "links": []
     },
     {
       "name": "Instructoría y coordinación de prácticas profesionales de estudiantes de comunicaciones",
       "company": "UCA - Universidad Centroamericana José Simeón Cañas",
       "start-date": "Agosto 2023",
       "end-date": "Diciembre 2023",
-      "summary": "Instructoría de contenido teórico y práctico en desarrollo de procesos de diagnóstico y comunicación interna. Seguimiento y evaluación de estudiantes desempeñando prácticas profesionales. Acompañamiento y correción de campañas y estrategias propuestas por estudiantes."
+      "summary": "Instructoría de contenido teórico y práctico en desarrollo de procesos de diagnóstico y comunicación interna. Seguimiento y evaluación de estudiantes desempeñando prácticas profesionales. Acompañamiento y correción de campañas y estrategias propuestas por estudiantes.",
+      "links": []
     },
     {
       "name": "Investigación -FONDO UCA 'La situación de la población adulta mayor salvadoreña a inicios de la década del envejecimiento saludable'",
       "company": "UCA - Universidad Centroamericana José Simeón Cañas",
       "start-date": "Enero 2022",
       "end-date": "Octubre 2023",
-      "summary": "Búsqueda y recolección de datos. Redacción de documentos técnicos/científicos. Desarrollo metodológico y construcción de herramientas de recolección de información. Investigación de campo/ recolección de datos. Construcción de artículo científico"
+      "summary": "Búsqueda y recolección de datos. Redacción de documentos técnicos/científicos. Desarrollo metodológico y construcción de herramientas de recolección de información. Investigación de campo/ recolección de datos. Construcción de artículo científico",
+      "links": []
     }
   ],
   "about": {

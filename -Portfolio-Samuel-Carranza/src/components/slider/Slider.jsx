@@ -34,7 +34,7 @@ const Slider = ({ imgs }) => {
 
         <div className="slider-wrapper">
           {imgs.map((img, i) => {
-            const src = `/public/polaroids-prueba/${img}.webp`;
+            const src = `/images/slider/${img}.webp`;
             return (
               <div
                 className={`slide ${currentImg === i ? "active" : ""}`}

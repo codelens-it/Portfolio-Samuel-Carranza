@@ -10,6 +10,7 @@ export interface ExperienceItem {
   "start-date": string;
   "end-date": string;
   summary: string;
+  links?: { label: string; url: string }[];
 }
 
 
@@ -20,7 +21,7 @@ const Experience = () => {
   const experiences = t("experience", { returnObjects: true }) as ExperienceItem[];
 
   return (
-    <div id="experience" className="Experience-container">
+    <div className="Experience-container">
         <div className="title-container-experience">
             <h2>{t('titles.experience')}</h2>
         </div>
@@ -28,9 +29,9 @@ const Experience = () => {
             <Timeline experiences={experiences} />
         </div>
         <div className="polaroid-container-experience">
-            <Polaroid image="/polaroids-prueba/sobre-mi.webp" alt="Samuel Carranza" size="small" />
-            <Polaroid image="/polaroids-prueba/sobre-mi.webp" alt="Samuel Carranza" size="small" />
-            <Polaroid image="/polaroids-prueba/sobre-mi.webp" alt="Samuel Carranza" size="small" />
+            <Polaroid image="/images/polaroids/Portafolio_61.webp" alt="Samuel Carranza" size="small" />
+            <Polaroid image="/images/polaroids/Portafolio_02.webp" alt="Samuel Carranza" size="small" />
+            <Polaroid image="/images/portfolio/Portafolio 92.webp" alt="Samuel Carranza" size="small" />
         </div>
     </div>
   );

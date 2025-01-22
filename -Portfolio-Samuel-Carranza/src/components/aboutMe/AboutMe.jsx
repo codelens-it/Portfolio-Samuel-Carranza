@@ -26,7 +26,7 @@ const AboutMe = () => {
   ];
 
   return (
-    <div id="about" className="about-me-conatiner">
+    <div className="about-me-conatiner">
       <div className="title-container">
         {/* <h2><span className='underline'>Sobre</span> Mí</h2> */}
         <h2 className="title-about-me">{t("titles.about")}</h2>
