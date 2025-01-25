@@ -95,5 +95,8 @@
     "slogan": "Pasión por cada detalle, perfección en cada frame",
     "media-contact-message": "Contáctame por redes",
     "copyright": "@2025 Desarrollado por CodeLens"
+  },
+  "videos": {
+    "notSupport": "Tu navegador no soporta la etiqueta de video."
   }
 }

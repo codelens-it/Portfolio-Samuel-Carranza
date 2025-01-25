@@ -95,5 +95,9 @@
     "slogan": "Passion for every detail, perfection in every frame.",
     "media-contact-message": "Contact me on my social media",
     "copyright": "@2025 Developed by CodeLens"
+  },
+  "videos": {
+    "notSupport": "Your browser does not support the video tag."
   }
+  
 }
