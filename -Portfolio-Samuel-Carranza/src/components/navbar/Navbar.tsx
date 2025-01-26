@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useLanguage } from '../../constants/LanguageContext';
 import './navbar.css'; 
 import { useTranslation } from 'react-i18next';
 
@@ -15,9 +14,23 @@ const Navbar = () => {
           document.body.classList.remove('open');
       }
   };
+
+  const closeMenuOnClick = () => {
+    setMenuOpen(false);
+  };
   
-    const closeMenuOnClick = () => {
-      setMenuOpen(false);
+    const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+      const href = e.currentTarget.getAttribute('href');
+      if (href) {
+        e.preventDefault();
+        setMenuOpen(false);
+        document.body.classList.remove('open');
+        
+        const element = document.querySelector(href);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
     };
 
     const handleLanguageToggle = () => {
@@ -34,15 +47,15 @@ const Navbar = () => {
           aria-controls="menu">
         </button>
       <div className={`menu ${menuOpen ? 'visible' : ''}`}>
-        <a href="#hero" className="navbar-logo">
+        <a href="#hero" className="navbar-logo" onClick={handleLinkClick}>
           <img src="/Logo-completo.svg" alt="Logo Samuel Carranza" />
         </a>
         <nav>
-            <a href="#hero">{t('titles.home')}</a>
-            <a href="#about-me">{t('titles.about')}</a>
-            <a href="#experience">{t('titles.experience')}</a>
-            <a href="#portfolio">{t('titles.portfolio')}</a>
-            <a href="#contact">{t('titles.navbar-contact')}</a>
+            <a href="#hero" onClick={handleLinkClick}>{t('titles.home')}</a>
+            <a href="#about-me" onClick={handleLinkClick}>{t('titles.about')}</a>
+            <a href="#experience" onClick={handleLinkClick}>{t('titles.experience')}</a>
+            <a href="#portfolio" onClick={handleLinkClick}>{t('titles.portfolio')}</a>
+            <a href="#contact" onClick={handleLinkClick}>{t('titles.navbar-contact')}</a>
             <div className="navbar-language" onClick={handleLanguageToggle}>
               <picture className='icon-language-container'>
                 <img className='icon-language'  src="/icons/icon-language.svg" alt="icono de mundo" />

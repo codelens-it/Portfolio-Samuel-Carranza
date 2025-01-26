@@ -5,10 +5,13 @@
     "portfolio": "Portfolio",
     "featured": "Destacadas",
     "gallery": "Galería",
+    "inphography": "Proyecto Infografía",
+    "inphography-subtitle": "Redacción, edición y fotografía",
     "about": "Sobre Mí",
     "tools": "Herramientas",
     "navbar-contact": "Contacto",
     "title-contact": "Contáctame"
+
   },
   "home": {
     "greeting": "¡Hola! Soy Samuel Carranza",
