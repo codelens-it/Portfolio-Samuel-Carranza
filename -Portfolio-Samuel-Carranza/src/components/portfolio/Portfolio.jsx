@@ -3,6 +3,7 @@ import Gallery from '../gallery/Gallery'
 import { useTranslation } from 'react-i18next'
 import './portfolio.css'
 import InfographicSection from '../infographic/Infographic'
+import Videos from '../videos/Videos.jsx'
 
 const Portfolio = () => {
 const { t } = useTranslation()
@@ -14,6 +15,7 @@ return(
   </div>
 </div>
   <Sliders/>
+  <Videos/>
   <Gallery/>
   <InfographicSection />
 </>
