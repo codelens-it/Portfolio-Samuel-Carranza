@@ -11,7 +11,10 @@
   height: 200px;
   cursor: pointer;
   border: 1px solid var(--darkslategray);
+  transition: transform 0.3s;
 }
+
+
 
 .video-item {
   width: 100%;
@@ -37,6 +40,7 @@
   background-position: center;
   background-size: cover;
 }
+
 
 /*Full width*/
 
