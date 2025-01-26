@@ -243,6 +243,10 @@
     height: 15vh; */
   }
 
+  .icon-container{
+    justify-content: center;
+  }
+
 }
 
 

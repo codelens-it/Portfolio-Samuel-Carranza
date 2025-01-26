@@ -69,6 +69,7 @@
     text-align    : left;
     font-size     : 1rem;
     color         : var(--white);
+    width: 100%;
 }
 
 
@@ -226,9 +227,15 @@ textarea:focus {
         justify-content: center;
         align-items    : center;
         gap            : 40px;
-        padding        : 0;
+        padding        : 0 40px;
         margin         : 0;
-        max-width      : 750px;
+        width: 100%;
+        max-width: 750px;
+    }
+    
+    .form-group{
+        width: 100%;
+        max-width: 750px;
     }
 
     .input-with-icon {
@@ -241,7 +248,7 @@ textarea:focus {
     input,
     textarea {
         /* width: 30rem; */
-        width : 280px;
+        width: 100%;
         border: none;
     }
 

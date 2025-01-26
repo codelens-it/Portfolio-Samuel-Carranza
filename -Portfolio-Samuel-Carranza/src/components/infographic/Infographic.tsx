@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import "./infographic.css"; //
 import CardInfographic from "./Cardinfographic";
+import { useTranslation } from "react-i18next";
 
 
 // Componente principal
 const InfographicSection = () => {
+    const { t } = useTranslation()
     const BASE_IMAGE_PATH = '/images/infographic/';
 
     const images = [
@@ -21,8 +23,8 @@ const InfographicSection = () => {
 
   return (
     <div className="infographic-section">
-        <h3>Proyecto Infografía</h3>
-        <h4>Redacción, edición y fotografía</h4>
+        <h3>{t('titles.inphography')}</h3>
+        <h4>{t('titles.inphography-subtitle')}</h4>
         <div className="card-container">
             {images.map((image, index) => (
                 <CardInfographic key={index} image={image} />
