@@ -120,7 +120,7 @@ const ContactForm = () => {
 
     //!!! Aca va el codigo que se saca de la pagina: https://web3forms.com/#start
     //!! Se pone el mail y llegua a un correo con el codigo = access_key... y ya esta.
-    formDatas.append("access_key", "ac53b12c-4486-4966-8cbe-e04c171a0f51");
+    formDatas.append("access_key", "28856435-ee10-495b-b414-fa7fd5b9b150");
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
