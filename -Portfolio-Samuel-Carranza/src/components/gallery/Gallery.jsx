@@ -52,7 +52,7 @@ const Gallery = () => {
         <div className="masonry">
           {
             imageData.map((img, i) => {
-              const src = '/public/images/portfolio/' + img + '.webp';
+              const src = '/images/portfolio/' + img + '.webp';
               return (
                 <div id={i} key={i} className={`item ${fullWidth === i ? 'item-fw' : ''} ${loaded ? '' : 'loading'}`}
                 style={{transform: isTabletSize ? `translateX(${-100 * imgIndex}%)` : 'none'}}>
