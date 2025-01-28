@@ -1,5 +1,5 @@
 import React from "react";
-import "./Footer.css"; // Archivo CSS externo
+import "./footer.css"; // Archivo CSS externo
 import { useTranslation } from "react-i18next";
 
 const Footer = () => {
