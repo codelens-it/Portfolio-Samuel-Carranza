@@ -27,8 +27,8 @@ const Footer = () => {
         <div className="footer-nav">
             <nav>
                 <div className="links">
-                  <a href="#inicio">{t('titles.hero')}</a>
-                  <a href="#about">{t('titles.about')}</a>
+                  <a href="#hero">{t('titles.home')}</a>
+                  <a href="#about-me">{t('titles.about')}</a>
                   <a href="#experience">{t('titles.experience')}</a>
                 </div>
                 <div className="links">                   
