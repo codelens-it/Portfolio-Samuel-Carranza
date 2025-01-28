@@ -1,0 +1,337 @@
+.contact-container {
+    display        : flex;
+    align-items    : center;
+    flex-direction : column;
+    justify-content: center;
+    width          : 100%;
+}
+
+.title-container-contact {
+    padding-bottom: 40px;
+    margin-bottom : 60px;
+}
+
+.title-contact {
+    position  : relative;
+    text-align: center;
+    color     : var(--white);
+    font-size : 50px;
+}
+
+.title-contact::before {
+    content         : "";
+    position        : absolute;
+    bottom          : -5px;
+    /* Coloca la línea justo debajo del texto */
+    left            : 50px;
+    width           : 150px;
+    transform       : translateX(-30%);
+    /* Haz que la línea ocupe todo el ancho del texto */
+    height          : 2px;
+    /* Grosor de la línea */
+    background-color: var(--darkred);
+    /* Color de la línea */
+}
+
+.contact-form-container {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    width          : 100%;
+}
+
+
+.container-form-section {
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items    : center;
+    padding        : 20px 10px;
+
+}
+
+.form-container {
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items    : center;
+    gap            : 40px;
+    max-width      : 750px;
+}
+
+
+/*distancia ente inputs y posicion del titulo.*/
+.form-group {
+    display       : flex;
+    flex-direction: column;
+    gap           : 5px;
+    /* margin     : 2rem; */
+    text-align    : left;
+    font-size     : 1rem;
+    color         : var(--white);
+    width: 100%;
+}
+
+
+/*Caja del Input */
+input,
+textarea {
+    width              : 40rem;
+    padding            : 0.7em;
+    border             : none;
+    border-bottom      : 1px solid var(--white);
+    /* background-color: #132644;  */
+    background         : rgba(255, 255, 255, 0.041);
+    font-size          : 1rem;
+    box-sizing         : border-box;
+    color              : var(--white);
+}
+
+textarea {
+    padding-right : 3rem;
+    padding-bottom: 3rem;
+}
+
+
+input::placeholder,
+textarea::placeholder {
+    font-size: 1rem;
+    /* tamñao placeholders */
+}
+
+input:focus,
+textarea:focus {
+    outline   : none;
+    /* Quita el borde predeterminado */
+    box-shadow: none;
+    /* Quita cualquier sombra aplicada */
+}
+
+
+/*Boton del form*/
+.contact-button {
+    background-color: var(--midnightblue);
+    color           : var(--white);
+    border          : none;
+    border-radius   : 20px;
+    cursor          : pointer;
+    /* ancho */
+    height          : 50px;
+    /*altura */
+    width           : 200px;
+    /* ancho máximo */
+    /* Propiedades de texto */
+    font-size       : 1.2rem;
+    /* Tamaño de fuente relativo */
+    line-height     : 26px;
+    text-align      : center;
+    /* Centrado del texto */
+
+}
+
+.contact-button:hover {
+    background-color: var(--darkred);
+}
+
+
+/*Error-Alerta*/
+.alert {
+    width: 38rem;
+}
+
+.input-error {
+    border-color: red;
+}
+
+.alert-warning {
+    color: var(--darkred);
+}
+
+/*Iconos*/
+.input-with-icon {
+    position: relative;
+}
+
+.input-with-icon::after {
+    content          : '';
+    position         : absolute;
+    right            : 0;
+    top              : 1.2rem;
+    transform        : translateY(-50%);
+    width            : 2.5rem;
+    /* tamaño del ícono */
+    height           : 2.5rem;
+    /* tamaño del ícono */
+    background-size  : contain;
+    background-repeat: no-repeat;
+}
+
+.input-with-icon.email::after {
+    background-image: url('/public/icons/e-mail-icon.svg');
+    /* Ajusta la ruta según la ubicación del archivo */
+}
+
+.input-with-icon.fullName::after {
+    background-image: url('/public/icons/user-icon.svg');
+    /* Ajusta la ruta según la ubicación del archivo */
+}
+
+@media (max-width: 800px) {
+    .contact-container {
+        display        : flex;
+        flex-direction : column;
+        justify-content: center;
+        width          : 100%;
+    }
+
+    .contact-form-container {
+        padding: 10px 0;
+    }
+
+    .title-container-contact {
+        margin-bottom: 20px;
+    }
+
+    .title-contact {
+        font-size: 30px;
+    }
+
+    .title-contact::before {
+        content         : "";
+        position        : absolute;
+        bottom          : -5px;
+        /* Coloca la línea justo debajo del texto */
+        left            : 30px;
+        width           : 95px;
+        transform       : translateX(-30%);
+        /* Haz que la línea ocupe todo el ancho del texto */
+        height          : 2px;
+        /* Grosor de la línea */
+        background-color: var(--darkred);
+        /* Color de la línea */
+    }
+
+    .container-form-section {
+        display        : flex;
+        flex-direction : column;
+        justify-content: center;
+        align-items    : center;
+        padding        : 0;
+        margin         : 0;
+        width          : 100%;
+    }
+
+    .form-container {
+        display        : flex;
+        flex-direction : column;
+        justify-content: center;
+        align-items    : center;
+        gap            : 40px;
+        padding        : 0 40px;
+        margin         : 0;
+        width: 100%;
+        max-width: 750px;
+    }
+    
+    .form-group{
+        width: 100%;
+        max-width: 750px;
+    }
+
+    .input-with-icon {
+        width  : 100%;
+        margin : 0;
+        padding: 0;
+    }
+
+    /*Caja del Input */
+    input,
+    textarea {
+        /* width: 30rem; */
+        width: 100%;
+        border: none;
+    }
+
+
+    .input-with-icon::after {
+        width : 40px;
+        height: 40px;
+        top   : 20px;
+        right : 5px;
+    }
+
+
+    .contact-button {
+        width     : 200px;
+        margin    : 0;
+        height    : 50px;
+        text-align: center;
+        font-size : 18px;
+    }
+
+    .alert {
+        width  : 280px;
+        padding: 10px;
+        margin : 0;
+    }
+
+}
+
+/* MODAL */
+.modal {
+    position        : fixed;
+    z-index         : 999;
+    top             : 0;
+    left            : 0;
+    width           : 100%;
+    min-height      : 100vh;
+    background-color: rgba(0, 0, 0, 0.75);
+    display         : none;
+    justify-content : center;
+    align-items     : center;
+    /* color           : var(--white); */
+}
+
+.modal.is-open {
+    display: flex;
+}
+
+.modal-conteiner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position  : relative;
+    min-width : 280px;
+    max-width : 480px;
+    min-height: 200px;
+    max-height: 600px;
+    overflow-y: auto;
+    border-radius: 20px;
+    padding: 1.9rem;
+    background-color: var(--white);
+}
+
+.logo-container-modal{
+    margin: 0;
+    padding: 0;
+}
+
+.logo-modal{
+    width: 180px;
+    margin: 0;
+    padding: 0;
+}
+.modal p{
+    color: var(--midnightblue);
+    text-align: center;
+    line-height: 25px;
+}
+
+.modal-cloes {
+    position: absolute;
+    top     : 1rem;
+    right   : 1rem;
+    color   : var(--midnightblue);
+}

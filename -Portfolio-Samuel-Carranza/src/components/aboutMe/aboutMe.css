@@ -1,0 +1,252 @@
+.title-container{
+  text-align: center;
+  padding: 60px 0 40px 0;
+}
+
+/*Titulo principal*/
+.title-about-me{
+  font-size: 50px;
+  text-align: center;
+  color:var(--white);
+  position: relative;
+  display: inline-block;
+}
+
+.title-about-me::before {
+  content: "";
+  position: absolute;
+  bottom: -5px; /* Coloca la línea justo debajo del texto */
+  left: 15%;
+  width: 70%; 
+  transform: translateX(-30%);/* Haz que la línea ocupe todo el ancho del texto */
+  height: 2px; /* Grosor de la línea */
+  background-color: var(--darkred); /* Color de la línea */
+}
+
+.title-about-me, h3, p{
+  color:var(--white);
+}
+
+/* .underline {
+  text-decoration: underline 0.1rem var(--darkred);
+} */
+
+/*---Primera seccion---*/
+/*Separacion de los contenedores*/
+.first-container {
+  display: flex;
+  /* width: 90%; */
+  /* height: 25rem; */
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  padding-top: 60px;
+  padding-bottom: 30px;
+  }
+  
+/*cada columna ocupa el 50% de la pag */
+.left-column, 
+.right-column {
+  flex: 1; /* columnas proporciones iguales */
+  /* border: 2px solid black;  */
+  /* height: 484px; */
+  padding: 0;
+  /* margin-top: -2rem; ; */
+  /* margin-left: 1px;
+  min-width: 400px; */
+}
+  
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 20px;
+}
+
+.left-column p {
+  font-size: 1.1rem; 
+  line-height: 1.5rem; 
+}
+
+.right-column {
+  /* margin-left: 5rem; */
+  /* background-color: #6c6b6b; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/*---Segunda seccion---*/
+/*Boton de CV*/
+.second-container{
+  /* background-color: #d3bebe; */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 40px 0;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.button-cv{
+  width: 250px;
+  height: 49px;
+  border-radius: 20px;
+  background-color: var(--midnightblue);
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center; 
+  border: none; 
+  cursor: pointer;
+}
+
+
+.button-cv:hover {
+  background-color: var(--darkred);
+}
+
+
+/*---Tercera seccion---*/
+/*Item tools*/
+.third-container{
+  padding: 40px 20px;
+}
+
+.icon-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px 0;
+  gap: 10px;
+}
+
+.img-card{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  text-align: center;
+
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+}
+  
+.img {
+  width: 50px;
+  height: 100%;
+  margin: 0 20px;
+  object-fit: cover; /* Ajusta la imagen para el círculo */
+}
+  
+.img-title {
+  margin-top: 0.4rem;
+  font-size: 1rem;
+  color: var(--white);
+  white-space: normal; 
+  display: inline-block;
+  max-width: 100px; 
+  text-align: center;
+}
+
+.img-card:hover {
+  transform: scale(1.08); /* Escala todo el card (imagen + título) */
+  transition: transform 0.2s ease-in-out; /* Suaviza la animación */
+}
+
+.img-card:hover .img,
+.img-card:hover .img-title {
+  transform: scale(1.01); /* Aplica la escala a la imagen y al texto */
+}
+
+.highlight {
+  color: var(--darkred); /* Ejemplo de color */
+  font-weight: 800;
+}
+
+
+/* .about-me-conatiner{
+  position: relative;
+  padding: 1rem;
+  margin: 2rem;
+  width: 100vw;
+  height: 92vh;
+} */
+
+@media (max-width: 800px) {
+  .title-about-me{
+    font-size: 30px;
+  }
+
+  .title-about-me::before {
+    content: "";
+    position: absolute;
+    bottom: -5px; /* Coloca la línea justo debajo del texto */
+    left: 20px;
+    width: 90px; 
+    transform: translateX(-30%);/* Haz que la línea ocupe todo el ancho del texto */
+    height: 2px; /* Grosor de la línea */
+    background-color: var(--darkred); /* Color de la línea */
+  }
+  
+  .about-me-conatiner {
+   /*  position: relative;
+    padding: 1rem;
+    margin: 2rem;
+    width: 100vw;
+    height: 170vh; */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .first-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .second-container{
+    /* position: relative;
+    padding: 1rem;
+    margin: 2rem;
+    width: 100vw;
+    height: 15vh; */
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .left-column p{
+    font-size: 1rem;
+  }
+
+  .third-container{
+    /* position: relative; */
+    padding: 1rem 10px; 
+    /* margin: 2rem; */
+    /* width: 100vw;
+    height: 15vh; */
+  }
+
+  .icon-container{
+    justify-content: center;
+  }
+
+}
+
+
