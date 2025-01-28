@@ -125,7 +125,7 @@
   }
   
   .timeline-links a {
-    color: #46434C;
+    color: #a5a4a6;
     font-size: 0.95rem;
     text-decoration: none;
   }
@@ -160,7 +160,7 @@
   }
   
   .polaroid-container-experience > *:nth-child(3) {
-    transform: rotate(15deg) translateX(20px);
+    transform: rotate(10deg) translateX(20px);
     z-index: 1;
   }
 
@@ -188,7 +188,7 @@
     }
 
     .polaroid-container-experience > *:nth-child(3) {
-        transform: rotate(12deg) translateX(130px);
+        transform: rotate(15deg) translateX(130px);
         z-index: 1;
     }
   }
