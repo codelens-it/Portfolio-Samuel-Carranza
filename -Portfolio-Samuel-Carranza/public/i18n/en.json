@@ -69,7 +69,7 @@
     ],
     "cv-message": "To learn more about my work, I invite you to download my Curriculum.",
     "download": "Download Resume",
-    "routCv": "public/cvs/Resume-Samuel-Carranza.pdf",
+    "routCv": "/cvs/Resume-Samuel-Carranza.pdf",
     "cvFile": "Resume-Samuel-Carranza.pdf"
   },
   "contact-form": {
