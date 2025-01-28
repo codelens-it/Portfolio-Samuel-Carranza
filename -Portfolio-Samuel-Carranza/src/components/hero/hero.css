@@ -66,14 +66,14 @@ gap: 5px;
 
 
 #hero .media-logo {
-  height: clamp(37.5px, 5vw, 75px);
-  width: clamp(37.5px, 5vw, 75px);
+  height: clamp(37.5px, 5vw, 56px);
+  width: clamp(37.5px, 5vw, 56px);
 
 }
 
 #hero .media-logo:not(.linkedin) {
-  height:clamp(30px, 4vw, 60px);
-  width: clamp(30px, 4vw, 60px);
+  height:clamp(30px, 4vw, 45px);
+  width: clamp(30px, 4vw, 45px);
 }
 
 /*hovers*/
