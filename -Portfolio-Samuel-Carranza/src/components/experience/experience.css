@@ -188,7 +188,7 @@
     }
 
     .polaroid-container-experience > *:nth-child(3) {
-        transform: rotate(15deg) translateX(130px);
+        transform: rotate(12deg) translateX(130px);
         z-index: 1;
     }
   }

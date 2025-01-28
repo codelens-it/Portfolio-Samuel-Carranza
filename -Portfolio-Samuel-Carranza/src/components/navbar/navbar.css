@@ -93,6 +93,7 @@ body.open .menu {
 .navbar-logo{
     display: flex;
     justify-content: center;
+    padding-bottom: 30px;
 }
 
 .navbar-logo img{
@@ -108,6 +109,7 @@ body.open .menu {
   justify-content: center;
   align-items: center;
   gap: 35px;
+  padding-left: 20px
   
 }
 
@@ -227,6 +229,7 @@ nav a:nth-child(5) {
 
     .navbar-logo{
         margin-left: 46px;
+        padding-bottom: 0;
     }
   
     .menu nav {
@@ -235,6 +238,7 @@ nav a:nth-child(5) {
         background: none;
         width: 50%;
         gap: 10px;
+        padding-left: 0;
     }
   
     .menu a {
