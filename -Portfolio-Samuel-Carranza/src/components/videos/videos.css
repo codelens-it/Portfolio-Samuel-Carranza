@@ -4,6 +4,8 @@
   padding: 10px 0;
   columns: 4 200px;
   gap: 10px;
+  row-gap: 20px;
+  padding-bottom: 80px;
 }
 
 .video-item-container {
