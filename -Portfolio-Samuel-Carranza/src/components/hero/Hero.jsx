@@ -19,8 +19,8 @@ const Hero = () => {
         </h1>
       </div>
       <div className="hero-media">
-        <a href=""><img className="media-logo linkedin" src="/icons/linkedin.svg" alt="LinkedIn" /></a>
-        <a href="https://www.instagram.com/femt_10?igsh=MWxteGdiZnd2amkzaw%3D%3D"><img  className="media-logo instagram"src="/icons/instagram.svg" alt="Instagram" /></a>
+        <a href="https://www.linkedin.com/in/samuel-carranza-754c25/" target="_blank"><img className="media-logo linkedin" src="/icons/linkedin.svg" alt="LinkedIn" /></a>
+        <a href="https://www.instagram.com/femt_10?igsh=MWxteGdiZnd2amkzaw%3D%3D" target="_blank"><img  className="media-logo instagram"src="/icons/instagram.svg" alt="Instagram" /></a>
       </div>
     </section>
   )
