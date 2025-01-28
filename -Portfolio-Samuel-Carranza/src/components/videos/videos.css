@@ -1,11 +1,10 @@
 .video-container {
-  width: 100%;
+  display: grid;
   height: auto;
-  padding: 10px 0;
-  columns: 4 200px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 10px;
-  row-gap: 20px;
-  padding-bottom: 80px;
+  padding: 10px 0 80px 0;
+  justify-content: center;
 }
 
 .video-item-container {
@@ -70,3 +69,8 @@
   display: none;
 }
 
+@media (max-width: 850px) and (min-width: 450px) {
+  .video-container {
+    grid-template-columns: repeat(2, minmax(200px, 280px));
+  }
+}
