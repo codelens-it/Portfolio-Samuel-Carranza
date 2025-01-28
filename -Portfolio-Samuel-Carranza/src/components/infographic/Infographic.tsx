@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./infographic.css"; //
-import CardInfographic from "./Cardinfographic";
+import CardInfographic from "./CardInfographic";
 import { useTranslation } from "react-i18next";
 
 
