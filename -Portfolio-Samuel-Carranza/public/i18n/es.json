@@ -78,7 +78,7 @@
     "full-name": "Nombre y Apellido",
     "email": "Correo electrónico",
     "message": "Mensaje",
-    "name-placeholder": "Jonh Doe",
+    "name-placeholder": "John Doe",
     "email-placeholder": "user@example.com",
     "message-placeholder": "Ingresa tu mensaje aqui",
     "submit": "Enviar",
