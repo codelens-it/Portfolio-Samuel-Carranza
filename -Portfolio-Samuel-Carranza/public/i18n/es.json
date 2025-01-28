@@ -70,8 +70,8 @@
   ],
     "cv-message": "Para conocer más sobre mi trabajo, te invito a descargar mi Curriculum Vitae.",
     "download": "Descargar CV",
-    "routCv": "public/cvs/Samuel-Carranza-CV-Esp.pdf",
-    "cvFile": "Samuel-Carranza-CV-Esp.pdf"
+    "routCv": "public/cvs/Samuel-Carranza-CV.pdf",
+    "cvFile": "Samuel-Carranza-CV.pdf"
     
   },
   "contact-form": {
